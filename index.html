@@ -82,3 +82,27 @@ fetch('animes.html')
 </script>
               
     <script src='script.js'/>
+
+<button id='back-to-top' title='Back to Top'>&#8593;</button>
+
+<script>
+// When the user scrolls down 100px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    var button = document.getElementById(&quot;back-to-top&quot;);
+    if (document.body.scrollTop &gt; 100 || document.documentElement.scrollTop &gt; 100) {
+        button.style.display = &quot;block&quot;; // Show the button
+    } else {
+        button.style.display = &quot;none&quot;; // Hide the button
+    }
+}
+
+// When the user clicks the button, scroll to the top of the page
+document.getElementById(&quot;back-to-top&quot;).onclick = function() {
+    window.scrollTo({ top: 0, behavior: &#39;smooth&#39; });
+};
+</script>
+              
+</body>
+</html>
