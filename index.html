@@ -1,33 +1,22 @@
 <!DOCTYPE html>
-<html b:html='true' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
-  <head>
-    
+<html>
+<head>
     <meta charset='UTF-8'/>
-<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
-
-    <link href='styles.css' rel='stylesheet'/>    
-    
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' name='viewport'/>
+    <link href='styles.css' rel='stylesheet'/>
     <title>AnimeNeek</title>
-    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type'/>
-    <b:if cond='data:blog.isMobile'>
-      <meta content='width=device-width, initial-scale=1' name='viewport'/>
-    </b:if>
-
-
-  </head>
-
-  <body>
+</head>
+<body>
     <!-- Header with Logo -->
-<header>
-    <a href='#' id='home-link'>
-        <img alt='Anime Search Logo' id='logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLtR-0AhORmFcP6S48BPR2He1JIz1ibnsvWTtfSTnGfJygjZt2uwgIZXNaaOfhjFvTYxRz8c1MQLafYEBE1x5JwhkndavGeT74U1d1nbSx69HBFCmzmsKl31z6Y-4V48J7Z-ZkI2f5yke1WJ3aaPbivcJZn5CqMltwvwtZArz8zqq7__xweKD6eQ8twuU/s502/AniNeek_Logo%20copy.png'/>
-    </a>
-</header>
+    <header>
+        <a href='#' id='home-link'>
+            <img alt='Anime Search Logo' id='logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLtR-0AhORmFcP6S48BPR2He1JIz1ibnsvWTtfSTnGfJygjZt2uwgIZXNaaOfhjFvTYxRz8c1MQLafYEBE1x5JwhkndavGeT74U1d1nbSx69HBFCmzmsKl31z6Y-4V48J7Z-ZkI2f5yke1WJ3aaPbivcJZn5CqMltwvwtZArz8zqq7__xweKD6eQ8twuU/s502/AniNeek_Logo%20copy.png'/>
+        </a>
+    </header>
 
-<script>
-    document.getElementById("home-link").href = window.location.origin;
-</script>
-
+    <script>
+        document.getElementById("home-link").href = window.location.origin;
+    </script>
 
     <!-- Search Box -->
     <section id='search-section'>
@@ -38,11 +27,8 @@
         <!-- Genres will be dynamically inserted here -->
     </section>
 
-
-
     <!-- Results Section -->
     <section id='results'></section>
-
 
     <!-- Modal for Episode Video -->
     <div class='modal' id='episode-modal'>
@@ -53,58 +39,54 @@
         </div>
     </div>
 
-<!-- index.html -->
-<div id="content-placeholder"></div>
+    <!-- Hidden Anime Data -->
+    <div id='anime-data' style='display: none;'></div>
 
-<script>// Fetch the external HTML file and insert its content
-// Fetch the external HTML file and insert its content
-fetch('animes.html')
-  .then(response => response.text())
-  .then(data => {
-    document.getElementById('content-placeholder').innerHTML = data;
+    <script>
+        // Fetch the external HTML file and insert its content
+        fetch('animes.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('anime-data').innerHTML = data;
 
-    // Now re-run any scripts that depend on the dynamically loaded content
-    document.querySelectorAll('.tmdbmovie').forEach(movie => {
-      const tmdbId = movie.getAttribute('data-tmdb-id');
-      
-      // Example logic to ensure each movie has its correct sources
-      movie.querySelectorAll('.tmdbm').forEach(source => {
-        if (source.closest('.tmdbmovie').getAttribute('data-tmdb-id') === tmdbId) {
-          source.style.display = 'block';  // Show correct source
-        } else {
-          source.style.display = 'none';   // Hide incorrect sources
+                // Example logic to process the anime data
+                document.querySelectorAll('.anime').forEach(anime => {
+                    const malId = anime.getAttribute('data-mal-id');
+                    const malTitle = anime.getAttribute('data-mal-title');
+
+                    console.log(`MAL ID: ${malId}, Title: ${malTitle}`);
+
+                    anime.querySelectorAll('.episode').forEach(episode => {
+                        const epLan = episode.getAttribute('data-ep-lan');
+                        const epNum = episode.getAttribute('data-ep-num');
+                        const videoId = episode.getAttribute('data-video-id');
+
+                        console.log(`Episode ${epNum} (${epLan}): Video ID ${videoId}`);
+                    });
+                });
+            })
+            .catch(error => console.error('Error loading content:', error));
+    </script>
+    
+    <button id='back-to-top' title='Back to Top'>&#8593;</button>
+
+    <script>
+        // When the user scrolls down 100px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            var button = document.getElementById("back-to-top");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                button.style.display = "block"; // Show the button
+            } else {
+                button.style.display = "none"; // Hide the button
+            }
         }
-      });
-    });
-  })
-  .catch(error => console.error('Error loading content:', error));
 
-</script>
-              
-<script src="script.js"></script>
-
-<button id='back-to-top' title='Back to Top'>&#8593;</button>
-
-<script>
-// When the user scrolls down 100px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-    var button = document.getElementById("back-to-top");
-if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-    button.style.display = "block"; // Show the button
-} else {
-    button.style.display = "none"; // Hide the button
-}
-
-}
-
-// When the user clicks the button, scroll to the top of the page
-document.getElementById("back-to-top").onclick = function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-};
-
-</script>
-              
+        // When the user clicks the button, scroll to the top of the page
+        document.getElementById("back-to-top").onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
 </body>
 </html>
