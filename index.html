@@ -25,7 +25,7 @@
 </header>
 
 <script>
-    document.getElementById(&quot;home-link&quot;).href = window.location.origin;
+    document.getElementById("home-link").href = window.location.origin;
 </script>
 
 
@@ -41,15 +41,15 @@
 
 
     <!-- Results Section -->
-    <section id='results'/>
+    <section id='results'></section>
 
 
     <!-- Modal for Episode Video -->
     <div class='modal' id='episode-modal'>
         <div class='modal-content'>
             <span class='close'>&#215;</span>
-            <h2 id='modal-title'/>
-            <iframe allowfullscreen='true' frameborder='0' id='video-embed'/>
+            <h2 id='modal-title'></h2>
+            <iframe allowfullscreen='true' frameborder='0' id='video-embed'></iframe>
         </div>
     </div>
 
@@ -90,18 +90,20 @@ fetch('animes.html')
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-    var button = document.getElementById(&quot;back-to-top&quot;);
-    if (document.body.scrollTop &gt; 100 || document.documentElement.scrollTop &gt; 100) {
-        button.style.display = &quot;block&quot;; // Show the button
-    } else {
-        button.style.display = &quot;none&quot;; // Hide the button
-    }
+    var button = document.getElementById("back-to-top");
+if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+    button.style.display = "block"; // Show the button
+} else {
+    button.style.display = "none"; // Hide the button
+}
+
 }
 
 // When the user clicks the button, scroll to the top of the page
-document.getElementById(&quot;back-to-top&quot;).onclick = function() {
-    window.scrollTo({ top: 0, behavior: &#39;smooth&#39; });
+document.getElementById("back-to-top").onclick = function() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 };
+
 </script>
               
 </body>
