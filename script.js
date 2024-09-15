@@ -129,17 +129,15 @@ function displayResults(data) {
     });
 }
 
-// Function to populate episode buttons based on JSON data
+// Function to populate episode buttons based on HTML data
 async function populateEpisodeButtons(animeDiv, malId) {
     console.log('Populating episode buttons for MAL ID:', malId); // Log MAL ID
 
     const subEpisodesDiv = animeDiv.querySelector('.sub-episodes');
     const dubEpisodesDiv = animeDiv.querySelector('.dub-episodes');
 
-    const animeData = await fetch('animes.json');
-    const episodesData = await animeData.json();
-    
-    const episodes = episodesData.filter(episode => episode['data-mal-id'] === malId);
+    const animeDataDiv = document.getElementById('anime-data');
+    const episodes = Array.from(animeDataDiv.querySelectorAll(`.anime[data-mal-id='${malId}'] .episode`));
 
     console.log('Found episodes:', episodes.length); // Log number of episodes found
 
@@ -152,13 +150,19 @@ async function populateEpisodeButtons(animeDiv, malId) {
     let hasSub = false;
     let hasDub = false;
 
-    episodes.forEach(episode => {
-        const epLan = episode['data-ep-lan'];
-        const epNum = episode['data-ep-num'];
-        const src = episode['data-src'];
-        const videoId = episode['data-video-id'];
-        const embedUrl = getEmbedUrl(src, videoId);
+    const embedUrls = await Promise.all(
+        episodes.map(async (episode) => {
+            const epLan = episode.getAttribute('data-ep-lan');
+            const epNum = episode.getAttribute('data-ep-num');
+            const src = episode.getAttribute('data-src');
+            const videoId = episode.getAttribute('data-video-id');
+            const embedUrl = await getEmbedUrl(src, videoId);
 
+            return { epLan, epNum, embedUrl };
+        })
+    );
+
+    embedUrls.forEach(({ epLan, epNum, embedUrl }) => {
         const button = document.createElement('button');
         button.textContent = embedUrl.includes('reallygreatsite.com') ? `EP ${epNum} (Coming Soon)` : `EP ${epNum}`;
         button.dataset.episode = epNum;
@@ -186,7 +190,7 @@ async function populateEpisodeButtons(animeDiv, malId) {
 }
 
 // Function to get the embed URL based on source and video ID
-function getEmbedUrl(src, videoId) {
+async function getEmbedUrl(src, videoId) {
     const baseUrls = {
         'anime': '//embtaku.com/streaming.php?id=',
         'hanime': '//nhplayer.com/v/',
@@ -196,106 +200,44 @@ function getEmbedUrl(src, videoId) {
         'other2': '//other2.com/v/'
     };
 
-    const placeholderImage = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjgbq98hgU5wyNYp-xBz28mNtZ7Hn5bXuMMXtnN6d318-XHF0GmKLiftvmYdYER_hmdN10t5kZ7AbcRwQnnPtpEjr0QBzrwOUvyKgOoPGsEEBTWqxxRTH1OmBlw5V4xW2laDOfVZVCvqc39aWtUBDGw8yHqiows2n1Yy-L5qur-8Tlq9r8Ly0z9ixGVpk/s1152/www.reallygreatsite.com.gif';
-
-    return `${baseUrls[src] || placeholderImage}${videoId}`;
+    const baseUrl = baseUrls[src] || baseUrls['other2']; // Default to 'other2' if src is unknown
+    return `${baseUrl}${videoId}`;
 }
 
-// Function to open the modal with episode details
+// Function to open the modal with the video
 function openModal(epNum, epLan, embedUrl) {
     const modal = document.getElementById('episode-modal');
-    const modalTitle = document.getElementById('modal-title');
     const videoEmbed = document.getElementById('video-embed');
+    const modalTitle = document.getElementById('modal-title');
 
-    modal.style.display = 'block';
-    modalTitle.textContent = `Episode ${epNum} - ${epLan}`;
+    modalTitle.textContent = `Episode ${epNum} (${epLan})`;
     videoEmbed.src = embedUrl;
+    
+    modal.style.display = 'block';
 }
 
-// Function to close the modal
-document.querySelector('.close').addEventListener('click', () => {
+// Close the modal when the user clicks the close button
+document.querySelector('#episode-modal .close').addEventListener('click', function() {
     const modal = document.getElementById('episode-modal');
     const videoEmbed = document.getElementById('video-embed');
 
+    videoEmbed.src = ''; // Stop the video
     modal.style.display = 'none';
-    videoEmbed.src = '';
 });
 
-// Infinite scrolling functionality
-window.addEventListener('scroll', function () {
-    if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 10 && !isLoading) {
-        loadResults();
+// Close the modal when clicking outside of the modal content
+window.addEventListener('click', function(event) {
+    if (event.target === document.getElementById('episode-modal')) {
+        const modal = document.getElementById('episode-modal');
+        const videoEmbed = document.getElementById('video-embed');
+
+        videoEmbed.src = ''; // Stop the video
+        modal.style.display = 'none';
     }
 });
 
 // Load genres and initial results when the page loads
-document.addEventListener('DOMContentLoaded', async () => {
-    await fetchGenres(); // Fetch and display genres
-    searchAnime(); // Trigger initial search to load results
+window.addEventListener('load', () => {
+    fetchGenres();
+    searchAnime();
 });
-
-// Function to fetch anime data from local JSON file
-async function fetchAnimeData() {
-    try {
-        const response = await fetch('animes.json');
-        const data = await response.json();
-        console.log('Fetched anime data:', data); // Log data for debugging
-    } catch (error) {
-        console.error('Error fetching anime data:', error);
-    }
-}
-
-// Function to filter results based on search input and genres
-async function filterResults() {
-    // Retrieve all anime data from local file or other source
-    const response = await fetch('animes.json');
-    const allAnimeData = await response.json();
-
-    // Filter anime based on search query and selected genres
-    const filteredAnime = allAnimeData.filter(anime => {
-        const titleMatches = anime['data-mal-title'].toLowerCase().includes(query.toLowerCase());
-        const genreMatches = selectedGenres.length === 0 || selectedGenres.includes(anime['data-mal-id']);
-        return titleMatches && genreMatches;
-    });
-
-    // Display filtered results
-    displayFilteredResults(filteredAnime);
-}
-
-// Function to display filtered results
-function displayFilteredResults(animeData) {
-    const resultsDiv = document.getElementById('results');
-    resultsDiv.innerHTML = '';
-
-    if (animeData.length === 0) {
-        resultsDiv.innerHTML = '<p>No results found</p>';
-        return;
-    }
-
-    animeData.forEach(anime => {
-        const animeDiv = document.createElement('div');
-        animeDiv.classList.add('anime-item');
-        
-        const genres = anime['data-ep-lan'] || 'Unknown'; // Update with appropriate data
-        const episodeCount = anime['data-ep-num'] || 'N/A';
-        const language = anime['data-ep-lan'] || 'N/A';
-        const videoId = anime['data-video-id'] || 'N/A';
-        const src = anime['data-src'] || 'N/A';
-        
-        animeDiv.innerHTML = `
-            <h3>${anime['data-mal-title']}</h3>
-            <div class='details'>
-                <span>Language: ${language}</span>
-                <span>Episode: ${episodeCount}</span>
-                <span>Video ID: ${videoId}</span>
-                <span>Source: ${src}</span>
-            </div>
-        `;
-
-        resultsDiv.appendChild(animeDiv);
-    });
-}
-
-// Add an event listener to re-filter results when genres or search input changes
-document.getElementById('anime-search').addEventListener('input', filterResults);
-document.getElementById('genre-filter').addEventListener('change', filterResults);
