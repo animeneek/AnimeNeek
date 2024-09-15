@@ -19,14 +19,14 @@ async function fetchGenres() {
 }
 
 // Event listener for the search input box
-document.getElementById('anime-search').addEventListener('keydown', function (event) {
+document.getElementById('anime-search').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         searchAnime();
     }
 });
 
 // Event listener for genre checkboxes
-document.getElementById('genre-filter').addEventListener('change', function (event) {
+document.getElementById('genre-filter').addEventListener('change', function(event) {
     if (event.target.type === 'checkbox') {
         const genreId = parseInt(event.target.value);
         if (event.target.checked) {
@@ -69,13 +69,13 @@ async function loadResults() {
 }
 
 // Function to display the search results
-function displayResults(data) {
+async function displayResults(data) {
     const resultsDiv = document.getElementById('results');
     if (data.data.length === 0 && currentPage === 1) {
         resultsDiv.innerHTML = '<p>No results found</p>';
         return;
     }
-    data.data.forEach(anime => {
+    for (const anime of data.data) {
         const animeDiv = document.createElement('div');
         animeDiv.classList.add('anime-item');
         const genres = anime.genres.map(genre => genre.name).join(', ');
@@ -86,7 +86,6 @@ function displayResults(data) {
         const synopsis = anime.synopsis || 'No synopsis available';
         const episodeCount = anime.episodes || 'N/A'; // Get the total number of episodes
         const type = anime.type || 'N/A'; // Get the type of the anime (TV, Movie, etc.)
-
         animeDiv.innerHTML = `
             <img alt='${anime.title}' src='${anime.images.jpg.image_url}'/>
             <div class='anime-info'>
@@ -104,52 +103,101 @@ function displayResults(data) {
                 <!-- SUB Episode Buttons -->
                 <div class='episode-box sub-episodes'>
                     <p><strong>SUB Episodes:</strong></p>
+                    <!-- Episodes will be dynamically inserted here -->
                 </div>
                 <!-- DUB Episode Buttons -->
                 <div class='episode-box dub-episodes'>
                     <p><strong>DUB Episodes:</strong></p>
+                    <!-- Episodes will be dynamically inserted here -->
                 </div>
             </div>
         `;
         resultsDiv.appendChild(animeDiv);
 
-        // Populate episode buttons based on the anime ID
-        populateEpisodeButtons(animeDiv, anime.mal_id);
-    });
+        // Fetch episode data and populate buttons
+        await populateEpisodeButtons(animeDiv, anime.mal_id);
+    }
 }
 
-// Function to populate episode buttons based on the anime's MAL ID
+// Function to fetch episode data and populate episode buttons
 async function populateEpisodeButtons(animeDiv, malId) {
-    const subEpisodesDiv = animeDiv.querySelector('.sub-episodes');
-    const dubEpisodesDiv = animeDiv.querySelector('.dub-episodes');
+    const subEpisodesDiv = animeDiv.querySelector('.sub-episodes'); // Get the sub-episodes container
+    const dubEpisodesDiv = animeDiv.querySelector('.dub-episodes'); // Get the dub-episodes container
 
-    try {
-        const episodeUrl = `https://api.jikan.moe/v4/anime/${malId}/episodes`; // Fetch episodes from the Jikan API
-        const response = await fetch(episodeUrl);
-        const episodeData = await response.json();
-        
-        let hasSub = false;
-        let hasDub = false;
+    // Fetch episode data from the JSON file
+    const response = await fetch('animes.json');
+    const episodesData = await response.json();
 
-        episodeData.data.forEach(episode => {
-            const button = document.createElement('button');
-            button.textContent = `EP ${episode.episode}`;
-            button.dataset.embedUrl = ''; // No actual embed URLs in the current setup, can add later if you have it
-            button.dataset.episode = episode.episode;
-            button.addEventListener('click', () => openModal(episode.episode, 'Sub', button.dataset.embedUrl));
+    // Filter episodes for the current anime
+    const episodes = episodesData.filter(ep => ep['data-mal-id'] === malId);
 
-            // Assuming all episodes are subbed for now
+    if (episodes.length === 0) {
+        subEpisodesDiv.innerHTML = '<p>Subbed Episodes Coming Soon</p>';
+        dubEpisodesDiv.innerHTML = '<p>Dubbed Episodes Coming Soon</p>';
+        return;
+    }
+
+    let hasSub = false; // Flag to check if subbed episodes exist
+    let hasDub = false; // Flag to check if dubbed episodes exist
+
+    episodes.forEach(episode => {
+        const epLan = episode['data-ep-lan'];
+        const epNum = episode['data-ep-num'];
+        const src = episode['data-src'];
+        const videoId = episode['data-video-id'];
+        const button = document.createElement('button');
+        button.textContent = `EP ${epNum}`;
+        button.dataset.episode = epNum;
+        button.dataset.type = epLan;
+        button.dataset.src = src;
+        button.dataset.videoId = videoId;
+        button.addEventListener('click', () => openModal(epNum, epLan, getEmbedUrl(src, videoId)));
+        if (epLan === 'Sub') {
             subEpisodesDiv.appendChild(button);
             hasSub = true;
-        });
-
-        if (!hasSub) {
-            subEpisodesDiv.innerHTML = '<p>Episodes Coming Soon</p>';
+        } else if (epLan === 'Dub') {
+            dubEpisodesDiv.appendChild(button);
+            hasDub = true;
         }
-    } catch (error) {
-        console.error('Error fetching episodes:', error);
-        subEpisodesDiv.innerHTML = '<p>Episodes Coming Soon</p>';
+    });
+
+    if (!hasSub) {
+        subEpisodesDiv.innerHTML = '<p>Subbed Episodes Coming Soon</p>';
+    }
+    if (!hasDub) {
         dubEpisodesDiv.innerHTML = '<p>Dubbed Episodes Coming Soon</p>';
+    }
+}
+
+// Function to get the embed URL based on source and video ID
+async function getEmbedUrl(src, videoId) {
+    const baseUrls = {
+        'anime': 'https://embtaku.com/streaming.php?id=',
+        'hanime': 'https://nhplayer.com/v/',
+        'streamtape': 'https://streamtape.com/e/',
+        'mp4upload': 'https://mp4upload.com/v/',
+        'URLPLAYTAKU': 'https://playtaku.net/videos/',
+        'other2': 'https://other2.com/v/'
+    };
+    const placeholderImage = 'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjgbq98hgU5wyNYp-xBz28mNtZ7Hn5bXuMMXtnN6d318-XHF0GmKLiftvmYdYER_hmdN10t5kZ7AbcRwQnnPtpEjr0QBzrwOUvyKgOoPGsEEBTWqxxRTH1OmBlw5V4xW2laDOfVZVCvqc39aWtUBDGw8yHqiows2n1Yy-L5qur-8Tlq9r8Ly0z9ixGVpk/s1152/www.reallygreatsite.com.gif';
+    if (src === 'URLPLAYTAKU') {
+        try {
+            const response = await fetch(`${baseUrls[src]}${videoId}`);
+            if (!response.ok) {
+                return placeholderImage;
+            }
+            const text = await response.text();
+            const parser = new DOMParser();
+            const doc = parser.parseFromString(text, 'text/html');
+            const iframe = doc.querySelector('iframe');
+            const embedUrl = iframe ? iframe.src : '';
+            return embedUrl || placeholderImage;
+        } catch (error) {
+            console.error('Error fetching embed URL:', error);
+            return placeholderImage;
+        }
+    } else {
+        return baseUrls[src] + videoId;
     }
 }
 
@@ -175,7 +223,7 @@ function closeModal() {
 document.querySelector('.modal .close').addEventListener('click', closeModal);
 
 // Close the modal when clicking outside of the modal content
-window.addEventListener('click', function (event) {
+window.addEventListener('click', function(event) {
     if (event.target === document.getElementById('episode-modal')) {
         closeModal();
     }
