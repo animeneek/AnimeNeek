@@ -93,11 +93,19 @@ function displayResults(animeList) {
             <span><strong>Score:</strong> ${anime.score || 'N/A'}</span>
             <p>${anime.synopsis ? anime.synopsis.substring(0, 150) + '...' : 'No synopsis available.'}</p>
           </div>
-          ${generateEpisodeButtons(anime.mal_id)}
+          <div id="episode-box-${anime.mal_id}">
+            <h4>Sub Episodes:</h4>
+            <div id="sub-episodes-${anime.mal_id}" class="episode-box"></div>
+            <h4>Dub Episodes:</h4>
+            <div id="dub-episodes-${anime.mal_id}" class="episode-box"></div>
+          </div>
         </div>
       </div>
     `;
     resultsDiv.innerHTML += animeItem;
+
+    // Call to populate episode buttons after rendering anime info
+    generateEpisodeButtons(anime.mal_id);
   });
 
   currentPage++;
@@ -105,31 +113,32 @@ function displayResults(animeList) {
 
 // Generate episode buttons (Dub/Sub) based on the anime ID and episodes in the JSON
 function generateEpisodeButtons(animeId) {
-  if (!episodeData[animeId]) return '<p>No episodes available</p>';
+  if (!episodeData[animeId]) return; // No episodes for this anime
+
+  const subContainer = document.getElementById(`sub-episodes-${animeId}`);
+  const dubContainer = document.getElementById(`dub-episodes-${animeId}`);
+
+  // Clear existing episodes (if any)
+  subContainer.innerHTML = '';
+  dubContainer.innerHTML = '';
 
   const episodes = episodeData[animeId];
-  let buttonsHtml = '<div class="episode-box">';
 
   // Group episodes by language (Dub/Sub)
-  const subEpisodes = episodes.filter(ep => ep['data-ep-lan'] === 'Sub');
-  const dubEpisodes = episodes.filter(ep => ep['data-ep-lan'] === 'Dub');
+  const subEpisodes = episodes.filter((ep) => ep['data-ep-lan'] === 'Sub');
+  const dubEpisodes = episodes.filter((ep) => ep['data-ep-lan'] === 'Dub');
 
   if (subEpisodes.length > 0) {
-    buttonsHtml += `<h4>Sub Episodes</h4>`;
     subEpisodes.forEach((ep) => {
-      buttonsHtml += `<button onclick="openEpisodeModal('https://www.anime-source.com/${ep['data-video-id']}', 'Sub - Episode ${ep['data-ep-num']}')">Ep ${ep['data-ep-num']}</button>`;
+      subContainer.innerHTML += `<button onclick="openEpisodeModal('https://www.anime-source.com/${ep['data-video-id']}', 'Sub - Episode ${ep['data-ep-num']}')">Ep ${ep['data-ep-num']}</button>`;
     });
   }
 
   if (dubEpisodes.length > 0) {
-    buttonsHtml += `<h4>Dub Episodes</h4>`;
     dubEpisodes.forEach((ep) => {
-      buttonsHtml += `<button onclick="openEpisodeModal('https://www.anime-source.com/${ep['data-video-id']}', 'Dub - Episode ${ep['data-ep-num']}')">Ep ${ep['data-ep-num']}</button>`;
+      dubContainer.innerHTML += `<button onclick="openEpisodeModal('https://www.anime-source.com/${ep['data-video-id']}', 'Dub - Episode ${ep['data-ep-num']}')">Ep ${ep['data-ep-num']}</button>`;
     });
   }
-
-  buttonsHtml += '</div>';
-  return buttonsHtml;
 }
 
 // Function to open the modal to watch the selected episode
