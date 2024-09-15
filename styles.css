@@ -1,243 +1,189 @@
-
 /* General Body Styles */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #000; /* Black background */
-    color: #fff;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
 }
 
 /* Header with Logo */
 header {
-    text-align: center;
-    padding: 20px;
+  text-align: center;
+  padding: 20px;
 }
 
 #logo {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Search Box */
 #search-section {
-    text-align: center;
-    margin-top: 20px;
+  text-align: center;
+  margin-top: 20px;
 }
 
 #anime-search {
-    padding: 10px;
-    width: 80%;
-    max-width: 600px;
-    border: 2px solid #ff4444;
-    border-radius: 5px;
-    background-color: #fff;
-    color: #000;
-    outline: none; /* Remove default blue outline */
+  padding: 10px;
+  width: 80%;
+  max-width: 600px;
+  border: 2px solid #ff4444;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #000;
+  outline: none;
 }
 
 /* Results Section */
 #results {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 100%;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 100%;
 }
 
 /* Anime Item */
 .anime-item {
-    display: flex;
-    align-items: flex-start; /* Align items at the start */
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: #222;
-    border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 5px;
 }
 
 .anime-item img {
-    width: 250px; /* Adjust size of the poster */
-    height: 100%; /* Adjust height for uniformity */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    margin-right: 20px;
-    border-radius: 10px;
-    margin-top: 20px
+  width: 250px;
+  height: 100%;
+  object-fit: cover;
+  margin-right: 20px;
+  border-radius: 10px;
 }
 
 .anime-info {
-    text-align: left;
-    flex: 1;
-    font-size: 1.0em;
+  text-align: left;
+  flex: 1;
+  font-size: 1.0em;
 }
 
 .english-title {
-    font-style: italic;
-    margin: 5px 0;
-    font-size: 0.9em;
+  font-style: italic;
+  margin: 5px 0;
 }
 
 .details {
-    margin: 10px 0;
-    font-size: 0.9em;
+  margin: 10px 0;
 }
 
 .details span {
-    display: block;
+  display: block;
 }
 
 /* Episode Box */
 .episode-box {
-    padding: 10px;
-    border: 1px solid #ff4444;
-    border-radius: 5px;
-    background-color: #333;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center; /* Center buttons */
-}
-
-.sub-episodes {
-    margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ff4444;
+  border-radius: 5px;
+  background-color: #333;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .episode-box button {
-    padding: 10px 10px;
-    background-color: #ff4444;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
+  padding: 10px;
+  background-color: #ff4444;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 10px;
 }
 
 .episode-box button:hover {
-    background-color: #ff8888;
+  background-color: #ff8888;
 }
 
 /* Modal Styles */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8); /* Black with opacity */
-    padding-top: 60px;
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding-top: 60px;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-    max-width: 900px; /* Increase the max-width */
-    position: relative;
-
-
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 900px;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
 }
 
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+.close:hover {
+  color: black;
 }
 
+/* Modal Video Embed */
 #video-embed {
-    width: 100%;
-    height: 500px; /* Adjust height as needed */
-}
-
-/* Modal Title Style */
-#modal-title {
-    color: #000; /* Ensure the title is visible */
-    margin-bottom: 10px;
+  width: 100%;
+  height: 500px;
 }
 
 /* Adjustments for mobile */
 @media (max-width: 600px) {
-    .anime-item {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  .anime-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .anime-item img {
-        margin-bottom: 10px;
-        /* Center image on mobile */
-    }
-}
-
-/* Justify synopsis text */
-.synopsis {
-    text-align: justify;
-    font-size: 0.9em;
+  .anime-item img {
+    margin-bottom: 10px;
+  }
 }
 
 /* Genre Filter Section */
-#genre-filter {
-    text-align: center;
-    margin: 20px auto;
-    font-size: 0.9em;
-    max-width: 70%
-}
-
-#genre-filter h2 {
-    margin-bottom: 10px;
-}
-
-/* Ensure checkbox and label are aligned in a single line */
 .genre-checkbox {
-    display: inline-flex;
-    align-items: center; /* Aligns the checkbox and text vertically */
-    margin: 5px;
-    cursor: pointer;
-    font-size: 0.9em;
-    color: #fff; /* White text for the genre */
+  display: inline-flex;
+  align-items: center;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  color: #fff;
 }
 
 .genre-checkbox input[type="checkbox"] {
-    margin-right: 10px; /* Space between checkbox and label */
-    accent-color: #ff4444; /* Red checkmark when selected */
+  margin-right: 10px;
+  accent-color: #ff4444;
 }
 
-
-
+/* Back-to-Top Button */
 #back-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100; /* Ensure the button appears above other elements */
-    background-color: #ff4444; /* Black background */
-    color: white; /* White text */
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    font-size: 18px;
-    cursor: pointer;
-    display: none; /* Hidden by default */
-}
-
-/* Change button size for mobile devices */
-@media (max-width: 768px) {
-    #back-to-top {
-        padding: 8px 12px;
-        font-size: 16px;
-        bottom: 15px; /* Adjust position for mobile */
-        right: 15px; /* Adjust position for mobile */
-    }
-}
-
-#back-to-top:hover {
-    background-color: #444; /* Darker on hover */
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 18px;
+  cursor: pointer;
+  display: none;
 }
