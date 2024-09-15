@@ -3,41 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anime Site</title>
+    <title>Anime Streaming</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Header with Logo -->
 <header>
     <a href="#" id="home-link">
         <img alt="Anime Search Logo" id="logo" src="assets/logo.png"/>
     </a>
 </header>
 
-<!-- Search Box -->
 <section id="search-section">
     <input id="anime-search" placeholder="Search for anime..." type="text"/>
 </section>
 
-<section id="genre-filter">
-    <!-- Genres will be dynamically inserted here -->
-</section>
+<section id="genre-filter"></section>
 
-<!-- Results Section -->
-<section id="results">
-    <!-- Anime items will be dynamically inserted here -->
-</section>
+<section id="results"></section>
 
-<!-- Episodes Container -->
-<div id="episodes-container" style="display: none;">
-    <!-- Episode buttons will be dynamically inserted here -->
-</div>
+<div id="episodes-container" style="display: none;"></div>
 
-<!-- Hidden Anime Data (from animes.json) -->
 <div id="anime-data" style="display: none;"></div>
 
-<!-- Modal for Episode Video -->
 <div class="modal" id="episode-modal">
     <div class="modal-content">
         <span class="close">&times;</span>
@@ -46,7 +34,6 @@
     </div>
 </div>
 
-<!-- Include the JavaScript -->
 <script src="script.js"></script>
 
 </body>
