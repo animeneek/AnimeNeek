@@ -132,11 +132,15 @@ function displayResults(data) {
 
 // Function to populate episode buttons based on HTML data
 async function populateEpisodeButtons(animeDiv, malId) {
-    const subEpisodesDiv = animeDiv.querySelector('.sub-episodes'); // Get the sub-episodes container
-    const dubEpisodesDiv = animeDiv.querySelector('.dub-episodes'); // Get the dub-episodes container
+    console.log('Populating episode buttons for MAL ID:', malId); // Log MAL ID
 
-    const animeDataDiv = document.getElementById('anime-data'); // Get the element containing all anime data
-    const episodes = animeDataDiv.querySelectorAll(`.anime[data-mal-id='${malId}'] .episode`); // Find episodes related to the given MAL ID
+    const subEpisodesDiv = animeDiv.querySelector('.sub-episodes');
+    const dubEpisodesDiv = animeDiv.querySelector('.dub-episodes');
+
+    const animeDataDiv = document.getElementById('anime-data');
+    const episodes = animeDataDiv.querySelectorAll(`.anime[data-mal-id='${malId}'] .episode`);
+
+    console.log('Found episodes:', episodes.length); // Log number of episodes found
 
     if (episodes.length === 0) {
         subEpisodesDiv.innerHTML = '<p>Subbed Episodes Coming Soon</p>';
@@ -161,7 +165,6 @@ async function populateEpisodeButtons(animeDiv, malId) {
 
     embedUrls.forEach(({ epLan, epNum, embedUrl }) => {
         const button = document.createElement('button');
-        
         button.textContent = embedUrl.includes('reallygreatsite.com') ? `EP ${epNum} (Coming Soon)` : `EP ${epNum}`;
         button.dataset.episode = epNum;
         button.dataset.type = epLan;
@@ -247,6 +250,8 @@ async function fetchAnimeData() {
     const response = await fetch('animes.json');
     const data = await response.json();
     const animeDataDiv = document.getElementById('anime-data');
+
+    console.log(data); // Log the data to verify its structure
 
     animeDataDiv.innerHTML = data.map(anime => `
         <div class='anime' data-mal-id='${anime.mal_id}'>
