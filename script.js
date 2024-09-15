@@ -110,17 +110,21 @@ function generateEpisodeButtons(animeId) {
   const episodes = episodeData[animeId];
   let buttonsHtml = '<div class="episode-box">';
 
-  if (episodes.sub.length > 0) {
+  // Group episodes by language (Dub/Sub)
+  const subEpisodes = episodes.filter(ep => ep['data-ep-lan'] === 'Sub');
+  const dubEpisodes = episodes.filter(ep => ep['data-ep-lan'] === 'Dub');
+
+  if (subEpisodes.length > 0) {
     buttonsHtml += `<h4>Sub Episodes</h4>`;
-    episodes.sub.forEach((ep) => {
-      buttonsHtml += `<button onclick="openEpisodeModal('${ep.url}', 'Sub - Episode ${ep.number}')">Ep ${ep.number}</button>`;
+    subEpisodes.forEach((ep) => {
+      buttonsHtml += `<button onclick="openEpisodeModal('https://www.anime-source.com/${ep['data-video-id']}', 'Sub - Episode ${ep['data-ep-num']}')">Ep ${ep['data-ep-num']}</button>`;
     });
   }
 
-  if (episodes.dub.length > 0) {
+  if (dubEpisodes.length > 0) {
     buttonsHtml += `<h4>Dub Episodes</h4>`;
-    episodes.dub.forEach((ep) => {
-      buttonsHtml += `<button onclick="openEpisodeModal('${ep.url}', 'Dub - Episode ${ep.number}')">Ep ${ep.number}</button>`;
+    dubEpisodes.forEach((ep) => {
+      buttonsHtml += `<button onclick="openEpisodeModal('https://www.anime-source.com/${ep['data-video-id']}', 'Dub - Episode ${ep['data-ep-num']}')">Ep ${ep['data-ep-num']}</button>`;
     });
   }
 
@@ -157,12 +161,17 @@ function openEpisodeModal(videoUrl, title) {
 async function loadEpisodeData() {
   const response = await fetch('animes.json');
   const data = await response.json();
-  for (const anime of data) {
-    episodeData[anime.mal_id] = {
-      sub: anime.sub || [],
-      dub: anime.dub || [],
-    };
-  }
+
+  // Group episodes by anime ID
+  data.forEach((episode) => {
+    const malId = episode['data-mal-id'];
+
+    if (!episodeData[malId]) {
+      episodeData[malId] = [];
+    }
+
+    episodeData[malId].push(episode);
+  });
 }
 
 // Infinite scroll listener
