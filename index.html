@@ -1,48 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anime Search</title>
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-
-  <body>
-    <!-- Header with Logo -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniNeek Streaming</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
     <header>
-      <a href="#" id="home-link">
-        <img
-          alt="Anime Search Logo"
-          id="logo"
-          src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLtR-0AhORmFcP6S48BPR2He1JIz1ibnsvWTtfSTnGfJygjZt2uwgIZXNaaOfhjFvTYxRz8c1MQLafYEBE1x5JwhkndavGeT74U1d1nbSx69HBFCmzmsKl31z6Y-4V48J7Z-ZkI2f5yke1WJ3aaPbivcJZn5CqMltwvwtZArz8zqq7__xweKD6eQ8twuU/s502/AniNeek_Logo%20copy.png"
-        />
-      </a>
+        <a href='#' id='home-link'>
+            <img alt='Anime Search Logo' id='logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLtR-0AhORmFcP6S48BPR2He1JIz1ibnsvWTtfSTnGfJygjZt2uwgIZXNaaOfhjFvTYxRz8c1MQLafYEBE1x5JwhkndavGeT74U1d1nbSx69HBFCmzmsKl31z6Y-4V48J7Z-ZkI2f5yke1WJ3aaPbivcJZn5CqMltwvwtZArz8zqq7__xweKD6eQ8twuU/s502/AniNeek_Logo%20copy.png'/>
+        </a>
     </header>
 
-    <!-- Search Box -->
+    <!-- Search Section -->
     <section id="search-section">
-      <input id="anime-search" placeholder="Search for anime..." type="text" />
+        <input type="text" id="anime-search" placeholder="Search for anime...">
     </section>
 
-    <!-- Genre Filter -->
+    <!-- Genre Filter Section -->
     <section id="genre-filter">
-      <!-- Genres will be dynamically inserted here -->
+        <h2>Filter by Genre</h2>
     </section>
 
     <!-- Results Section -->
     <section id="results"></section>
 
-    <!-- Modal for Episode Video -->
-    <div class="modal" id="episode-modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <h2 id="modal-title"></h2>
-        <iframe allowfullscreen="true" frameborder="0" id="video-embed"></iframe>
-      </div>
+    <!-- Modal for Episode Player -->
+    <div id="episode-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3 id="modal-title">Episode Title</h3>
+            <iframe id="video-embed" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
-    <!-- Link to external JavaScript -->
+    <button id="back-to-top">Back to Top</button>
+
     <script src="script.js"></script>
-  </body>
+</body>
 </html>
