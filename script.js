@@ -1,272 +1,423 @@
-let currentPage = 1;
-let query = &#39;&#39;;
-let selectedGenres = [];
+let isDarkMode = true;
+let page = 1;
 let isLoading = false;
+let selectedAnime = {}; // Store the selected anime details
+let episodesData = {}; // Store episode data from JSON file
+let animeImage = ''; // Declare globally
+let hentaiFilterOn = false; // Default is 'off'
 
-// Fetch and display genres
+function toggleHentaiFilter() {
+  hentaiFilterOn = !hentaiFilterOn;
+
+  // Select the butterfly toggle element
+  const butterflyToggle = document.getElementById('butterfly-toggle');
+
+  // Toggle the 'active' class based on the hentai filter state
+  if (hentaiFilterOn) {
+    butterflyToggle.classList.add('active'); // Add 'active' class
+  } else {
+    butterflyToggle.classList.remove('active'); // Remove 'active' class
+  }
+
+  searchAnime(); // Re-run the search with the new filter state
+}
+
+// Toggle Theme
+function toggleTheme() {
+  const body = document.body;
+  isDarkMode = !isDarkMode;
+  const themeIcon = document.getElementById('themeIcon');
+  if (isDarkMode) {
+    body.classList.remove('light-mode');
+    themeIcon.classList.remove('fa-sun');
+    themeIcon.classList.add('fa-moon');
+  } else {
+    body.classList.add('light-mode');
+    themeIcon.classList.remove('fa-moon');
+    themeIcon.classList.add('fa-sun');
+  }
+}
+
+// Fetch Genres from Jikan v4 and Populate Dropdown
 async function fetchGenres() {
-    const url = &#39;https://api.jikan.moe/v4/genres/anime&#39;;
+  try {
+    const response = await fetch('https://api.jikan.moe/v4/genres/anime');
+    const data = await response.json();
+    const genres = data.data.sort((a, b) => a.name.localeCompare(b.name)); // Sort alphabetically
+    const genreDropdown = document.getElementById('genreDropdown');
+
+    // Clear existing options in case of re-fetch
+    genreDropdown.innerHTML = '';
+
+    // Add individual genres
+    genres.forEach(genre => {
+      const label = document.createElement('label');
+      label.innerHTML = `<input type="checkbox" value="${genre.mal_id}" onchange="searchAnime()"> ${genre.name}`;
+      genreDropdown.appendChild(label);
+    });
+  } catch (error) {
+    console.error("Error fetching genres:", error);
+  }
+}
+
+// Get selected genres
+function getSelectedGenres() {
+  const selectedGenres = [];
+  document.querySelectorAll('#genreDropdown input[type="checkbox"]:checked').forEach(checkbox => {
+    selectedGenres.push(checkbox.value);
+  });
+  return selectedGenres;
+}
+
+// Fetch Anime
+async function fetchAnime(query = '', genres = [], page = 1) {
+  try {
+    isLoading = true;
+    const genreQuery = genres.length ? `&genres=${genres.join(',')}` : '';
+    const hentaiFilter = hentaiFilterOn ? '' : '&sfw=true'; // Apply the hentai filter if off
+
+    const url = `https://api.jikan.moe/v4/anime?q=${query}&limit=25&page=${page}${genreQuery}${hentaiFilter}`;
     const response = await fetch(url);
     const data = await response.json();
-    
-    const genreFilterDiv = document.getElementById(&#39;genre-filter&#39;);
-    const genreList = data.data;
 
-    genreList.sort((a, b) =&gt; a.name.localeCompare(b.name)); // Sort genres alphabetically
-
-    genreFilterDiv.innerHTML += genreList.map(genre =&gt; `
-        <label class='genre-checkbox'>
-            <input type='checkbox' value='${genre.mal_id}'/> ${genre.name}
-        </label>
-    `).join(&#39;&#39;);
-}
-
-// Event listener for the search input box
-document.getElementById(&#39;anime-search&#39;).addEventListener(&#39;keydown&#39;, function(event) {
-    if (event.key === &#39;Enter&#39;) {
-        searchAnime();
-    }
-});
-
-// Event listener for genre checkboxes
-document.getElementById(&#39;genre-filter&#39;).addEventListener(&#39;change&#39;, function(event) {
-    if (event.target.type === &#39;checkbox&#39;) {
-        const genreId = parseInt(event.target.value);
-        if (event.target.checked) {
-            selectedGenres.push(genreId);
-        } else {
-            selectedGenres = selectedGenres.filter(id =&gt; id !== genreId);
-        }
-        searchAnime(); // Re-search with updated filters
-    }
-});
-
-// Function to search for anime
-async function searchAnime() {
-    const searchInput = document.getElementById(&#39;anime-search&#39;);
-    query = searchInput.value;
-    currentPage = 1;
-    document.getElementById(&#39;results&#39;).innerHTML = &#39;&#39;; // Clear previous results
-    loadResults();
-}
-
-// Function to load search results with infinite scrolling
-async function loadResults() {
-    if (isLoading) return;
-    isLoading = true;
-
-    let url = `https://api.jikan.moe/v4/anime?q=${encodeURIComponent(query)}&amp;page=${currentPage}`;
-    
-    if (selectedGenres.length &gt; 0) {
-        // Join genres by comma and add to URL
-        url += `&amp;genres=${selectedGenres.join(&#39;,&#39;)}`;
+    if (data.data.length === 0 && page === 1) {
+      document.getElementById('noResults').style.display = 'block';
+      document.getElementById('animeResults').innerHTML = '';
+    } else {
+      document.getElementById('noResults').style.display = 'none';
+      displayAnime(data.data);
     }
 
-    try {
-        const response = await fetch(url);
-        const data = await response.json();
-
-        displayResults(data);
-        currentPage++; // Load next page when user scrolls
-    } catch (error) {
-        console.error(&#39;Error fetching results:&#39;, error);
-    } finally {
-        isLoading = false;
-    }
+    isLoading = false;
+  } catch (error) {
+    console.error("Error fetching anime:", error);
+  }
 }
 
 
-// Function to display the search results
-function displayResults(data) {
-    const resultsDiv = document.getElementById(&#39;results&#39;);
-    
-    if (data.data.length === 0 &amp;&amp; currentPage === 1) {
-        resultsDiv.innerHTML = &#39;<p>No results found</p>&#39;;
-        return;
-    }
+// Display Anime Results
+function displayAnime(animeList) {
+  const animeResults = document.getElementById('animeResults');
+  if (page === 1) {
+    animeResults.innerHTML = '';
+  }
 
-    data.data.forEach(anime =&gt; {
-        const animeDiv = document.createElement(&#39;div&#39;);
-        animeDiv.classList.add(&#39;anime-item&#39;);
-        
-        const genres = anime.genres.map(genre =&gt; genre.name).join(&#39;, &#39;);
-        const aired = anime.aired.string || &#39;N/A&#39;;
-        const score = anime.score || &#39;N/A&#39;;
-        const status = anime.status || &#39;N/A&#39;;
-        const englishTitle = anime.title_english || &#39;&#39;;
-        const synopsis = anime.synopsis || &#39;No synopsis available&#39;;
-        const episodeCount = anime.episodes || &#39;N/A&#39;; // Get the total number of episodes
-        const type = anime.type || &#39;N/A&#39;; // Get the type of the anime (TV, Movie, etc.)
+  animeList.forEach(anime => {
+    const animeItem = document.createElement('div');
+    animeItem.classList.add('anime-item');
 
-        animeDiv.innerHTML = `
-            <img alt='${anime.title}' src='${anime.images.jpg.image_url}'/>
-            <div class='anime-info'>
-                <h3>${anime.title}</h3>
-                ${englishTitle ? `<div class='english-title'>${englishTitle}</div>` : &#39;&#39;}
-                <div class='details'>
-                    <span>Type: ${type}</span> <!-- Display the type of the anime -->
-                    <span>Episodes: ${episodeCount}</span> <!-- Display the episode count -->
-                    <span>Status: ${status}</span>
-                    <span>Aired: ${aired}</span>
-                    <span>Genres: ${genres}</span>
-                    <span>Score: ${score}</span>
-                </div>
-                <p class='synopsis'>${synopsis}</p>
+    const fallbackImage = 'https://via.placeholder.com/150x220?text=No+Image';
+    const animeImage = anime.images && anime.images.jpg ? anime.images.jpg.image_url : fallbackImage;
 
-                <!-- SUB Episode Buttons -->
-                <div class='episode-box sub-episodes'>
-                    <p><strong>SUB Episodes:</strong></p>
-                    <!-- Episodes will be dynamically inserted here -->
-                </div>
+    animeItem.innerHTML = `
+      <img src="${animeImage}" 
+           alt="${anime.title}"
+           onclick="openModal(${anime.mal_id})">
+      <h3>${anime.title}</h3>
+    `;
 
-                <!-- DUB Episode Buttons -->
-                <div class='episode-box dub-episodes'>
-                    <p><strong>DUB Episodes:</strong></p>
-                    <!-- Episodes will be dynamically inserted here -->
-                </div>
-            </div>
-        `;
-        resultsDiv.appendChild(animeDiv);
+    animeResults.appendChild(animeItem);
+  });
+}
 
-        // Populate episode buttons based on the HTML data
-        populateEpisodeButtons(animeDiv, anime.mal_id);
+// Fetch JSON with Episode Data
+async function fetchEpisodeData() {
+  try {
+    const response = await fetch('https://raw.githubusercontent.com/animeneek/AnimeNeek/refs/heads/main/animeneek.json');
+    episodesData = await response.json();
+  } catch (error) {
+    console.error("Error fetching episode data:", error);
+  }
+}
+
+// Open modal with the selected anime details
+function openModal(animeId) {
+  const modal = document.getElementById('animeModal');
+  const modalContent = document.getElementById('modalAnimeContent');
+
+  // Ensure modal is shown before fetching data
+  modal.style.display = 'block';  // Display the modal immediately
+
+  // Fetch the selected anime details using the Jikan API
+  fetch(`https://api.jikan.moe/v4/anime/${animeId}`)
+    .then(response => response.json())
+    .then(data => {
+      const anime = data.data;
+      const fallbackImage = 'https://via.placeholder.com/800x450?text=No+Video+Available';
+      const animeImage = anime.images && anime.images.jpg ? anime.images.jpg.large_image_url : fallbackImage;
+
+      // Inject anime details into the modal content
+modalContent.innerHTML = `
+  <!-- Embed Video Placeholder -->
+  <div class="embed-video">
+    <img src="${animeImage}" alt="${anime.title}" class="embed-video-placeholder">
+    <div class="overlay-text">Please select the episode below.</div>
+  </div>
+
+  <!-- Thin Banner -->
+  <div class="thin-banner">
+    <h3>Watch Anime</h3>
+  </div>
+
+  <!-- SUB Section -->
+  <div class="sub-section">
+    <h4>SUB:</h4>
+    <select id="subEpisodeDropdown">
+      <option>Select Episode</option>
+    </select>
+
+    <select id="subSourceDropdown">
+      <option>Select Source</option>
+    </select>
+
+    <button class="play-button" onclick="playVideo('sub')">Play</button>
+  </div>
+
+  <!-- DUB Section -->
+  <div class="dub-section">
+    <h4>DUB:</h4>
+    <select id="dubEpisodeDropdown">
+      <option>Select Episode</option>
+    </select>
+
+    <select id="dubSourceDropdown">
+      <option>Select Source</option>
+    </select>
+
+    <button class="play-button" onclick="playVideo('dub')">Play</button>
+  </div>
+
+  <!-- Anime Details Section -->
+  <div class="anime-details">
+    <div class="anime-poster" style="width: 200px; height: 300px; overflow: hidden; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+      <img src="${animeImage}" alt="${anime.title}" style="width: 100%; height: auto; object-fit: cover;">
+    </div>
+    <div class="anime-info">
+      <h2>${anime.title}</h2>
+      <p><strong>Alternative Titles:</strong> ${anime.title_english || 'N/A'}</p>
+      <p><strong>Type:</strong> ${anime.type || 'N/A'}</p>
+      <p><strong>Episodes:</strong> ${anime.episodes || 'N/A'}</p>
+      <p><strong>Status:</strong> ${anime.status}</p>
+      <p><strong>Aired:</strong> ${anime.aired ? anime.aired.string : 'N/A'}</p>
+      <p><strong>Genres:</strong> ${anime.genres ? anime.genres.map(genre => genre.name).join(', ') : 'N/A'}</p>
+      <p><strong>Score:</strong> ${anime.score || 'N/A'}</p>
+      <p><strong>Synopsis:</strong> ${anime.synopsis || 'No synopsis available.'}</p>
+    </div>
+  </div>
+`;
+
+
+      // Populate episodes from the fetched JSON based on the selected anime
+      populateEpisodes(animeId);
+      modal.style.display = 'block';
+    })
+    .catch(error => {
+      console.error("Error fetching anime details:", error);
     });
 }
 
-// Function to populate episode buttons based on HTML data
-async function populateEpisodeButtons(animeDiv, malId) {
-    const subEpisodesDiv = animeDiv.querySelector(&#39;.sub-episodes&#39;); // Get the sub-episodes container
-    const dubEpisodesDiv = animeDiv.querySelector(&#39;.dub-episodes&#39;); // Get the dub-episodes container
+// Populate SUB and DUB episodes based on selected anime
+function populateEpisodes(animeId) {
+  const subEpisodeDropdown = document.getElementById('subEpisodeDropdown');
+  const dubEpisodeDropdown = document.getElementById('dubEpisodeDropdown');
+  const subSourceDropdown = document.getElementById('subSourceDropdown');
+  const dubSourceDropdown = document.getElementById('dubSourceDropdown');
 
-    const animeDataDiv = document.getElementById(&#39;anime-data&#39;); // Get the element containing all anime data
-    const episodes = animeDataDiv.querySelectorAll(`.anime[data-mal-id=&#39;${malId}&#39;] .episode`); // Find episodes related to the given MAL ID
+  const selectedAnime = episodesData.find(anime => anime['data-mal-id'] === animeId);
 
-    if (episodes.length === 0) { // If no episodes are found, display a &quot;Coming Soon&quot; message
-        subEpisodesDiv.innerHTML = &#39;<p>Subbed Episodes Coming Soon</p>&#39;; // Display &quot;Subbed Episodes Coming Soon&quot;
-        dubEpisodesDiv.innerHTML = &#39;<p>Dubbed Episodes Coming Soon</p>&#39;; // Display &quot;Dubbed Episodes Coming Soon&quot;
-        return;
-    }
+  if (selectedAnime) {
+    // Clear previous options
+    subEpisodeDropdown.innerHTML = '<option>Select Episode</option>';
+    dubEpisodeDropdown.innerHTML = '<option>Select Episode</option>';
+    subSourceDropdown.innerHTML = '<option>Select Source</option>';
+    dubSourceDropdown.innerHTML = '<option>Select Source</option>';
 
-    let hasSub = false; // Flag to check if subbed episodes exist
-    let hasDub = false; // Flag to check if dubbed episodes exist
+    // Populate SUB and DUB episodes
+    selectedAnime.episodes.forEach(episode => {
+      const option = document.createElement('option');
+      option.value = episode['data-video-id'];
+      option.textContent = `Episode ${episode['data-ep-num']}`;
 
-    const embedUrls = await Promise.all(
-        Array.from(episodes).map(async (episode) =&gt; {
-            const epLan = episode.getAttribute(&#39;data-ep-lan&#39;); // Get episode language (Sub/Dub)
-            const epNum = episode.getAttribute(&#39;data-ep-num&#39;); // Get episode number
-            const src = episode.getAttribute(&#39;data-src&#39;); // Get source of the episode
-            const videoId = episode.getAttribute(&#39;data-video-id&#39;); // Get video ID
-            const embedUrl = await getEmbedUrl(src, videoId); // Generate the embed URL
-
-            return { epLan, epNum, embedUrl }; // Return an object with episode language, number, and URL
-        })
-    );
-
-    embedUrls.forEach(({ epLan, epNum, embedUrl }) =&gt; {
-        const button = document.createElement(&#39;button&#39;); // Create a new button element
-        
-        // Set the button text to show &quot;(Coming Soon)&quot; if the embed URL is the placeholder
-        button.textContent = embedUrl.includes(&#39;reallygreatsite.com&#39;) ? `EP ${epNum} (Coming Soon)` : `EP ${epNum}`; // Conditional text display
-
-        button.dataset.episode = epNum; // Store episode number in data attribute
-        button.dataset.type = epLan; // Store episode language in data attribute
-        button.dataset.embedUrl = embedUrl; // Store embed URL in data attribute
-
-        button.addEventListener(&#39;click&#39;, () =&gt; openModal(epNum, epLan, embedUrl)); // Add click event listener to open modal with episode details
-
-        if (epLan === &#39;Sub&#39;) { // If the episode is subbed
-            subEpisodesDiv.appendChild(button); // Append the button to the sub-episodes container
-            hasSub = true; // Set subbed episodes flag to true
-        } else if (epLan === &#39;Dub&#39;) { // If the episode is dubbed
-            dubEpisodesDiv.appendChild(button); // Append the button to the dub-episodes container
-            hasDub = true; // Set dubbed episodes flag to true
-        }
+      if (episode['data-ep-lan'] === 'Sub') {
+        subEpisodeDropdown.appendChild(option);
+      } else if (episode['data-ep-lan'] === 'Dub') {
+        dubEpisodeDropdown.appendChild(option);
+      }
     });
 
-    if (!hasSub) { // If no subbed episodes were found
-        subEpisodesDiv.innerHTML = &#39;<p>Episodes Coming Soon</p>&#39;; // Display &quot;Episodes Coming Soon&quot;
-    }
+    // Function to populate source dropdowns
+    const populateSourceDropdown = (dropdown, episodeId, sources) => {
+      // Clear existing options
+      dropdown.innerHTML = '<option>Select Source</option>';
 
-    if (!hasDub) { // If no dubbed episodes were found
-        dubEpisodesDiv.innerHTML = &#39;<p>Episodes Coming Soon</p>&#39;; // Display &quot;Episodes Coming Soon&quot;
-    }
-}
+      // Add sources to the dropdown
+      sources.forEach(source => {
+        // Map the source to its new name
+        const sourceNameMap = {
+          'anime': 'VIDSRC',
+          'hanime': 'HANIME',
+          'streamtape': 'STREAMTAPE',
+          'mp4upload': 'mp4upload',
+          'other': 'other',
+          'URL': 'EMBTAKU', // Changed from URL to EMBTAKU
+        };
 
+        const sourceOption = document.createElement('option');
+        sourceOption.value = sourceNameMap[source] || source; // Fallback if the source isn't found
+        sourceOption.textContent = sourceNameMap[source] || source;
+        dropdown.appendChild(sourceOption);
+      });
 
-// Function to get the embed URL based on source and video ID
-async function getEmbedUrl(src, videoId) {
-    const baseUrls = {
-        &#39;anime&#39;: &#39;//embtaku.com/streaming.php?id=&#39;,
-        &#39;hanime&#39;: &#39;//nhplayer.com/v/&#39;,
-        &#39;streamtape&#39;: &#39;//streamtape.com/e/&#39;,
-        &#39;mp4upload&#39;: &#39;//mp4upload.com/v/&#39;,
-        &#39;URLPLAYTAKU&#39;: &#39;https://playtaku.net/videos/&#39;, // Base URL for &#39;playtaku&#39;
-        &#39;other2&#39;: &#39;//other2.com/v/&#39;
+      // Automatically select the first source if there are any available
+      if (dropdown.options.length > 1) {
+        dropdown.selectedIndex = 1; // Select the first valid source
+      }
     };
 
-    // Placeholder image URL
-    const placeholderImage = &#39;https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgjgbq98hgU5wyNYp-xBz28mNtZ7Hn5bXuMMXtnN6d318-XHF0GmKLiftvmYdYER_hmdN10t5kZ7AbcRwQnnPtpEjr0QBzrwOUvyKgOoPGsEEBTWqxxRTH1OmBlw5V4xW2laDOfVZVCvqc39aWtUBDGw8yHqiows2n1Yy-L5qur-8Tlq9r8Ly0z9ixGVpk/s1152/www.reallygreatsite.com.gif&#39;;
+    // Update sources when an episode is selected
+    subEpisodeDropdown.addEventListener('change', () => {
+      const selectedEpisodeId = subEpisodeDropdown.value;
+      const episodeData = selectedAnime.episodes.find(ep => ep['data-video-id'] === selectedEpisodeId);
 
-    if (src === &#39;URLPLAYTAKU&#39;) {
-        // Fetch the page content to extract the actual video URL
+      if (episodeData) {
+        populateSourceDropdown(subSourceDropdown, selectedEpisodeId, [episodeData['data-src']]);
+      }
+    });
+
+    dubEpisodeDropdown.addEventListener('change', () => {
+      const selectedEpisodeId = dubEpisodeDropdown.value;
+      const episodeData = selectedAnime.episodes.find(ep => ep['data-video-id'] === selectedEpisodeId);
+
+      if (episodeData) {
+        populateSourceDropdown(dubSourceDropdown, selectedEpisodeId, [episodeData['data-src']]);
+      }
+    });
+  }
+}
+
+
+// Play Video Function (Update to embed video)
+async function playVideo(type) {
+  const episodeDropdown = document.getElementById(`${type}EpisodeDropdown`);
+  const sourceDropdown = document.getElementById(`${type}SourceDropdown`);
+
+  const selectedEpisodeId = episodeDropdown.value; // This is the 'data-video-id'
+  const selectedSource = sourceDropdown.value; // This is the selected source
+
+  if (selectedEpisodeId !== 'Select Episode' && selectedSource !== 'Select Source') {
+    let embedLink = '';
+
+    // Define the embed URL structure based on the selected source
+    switch (selectedSource) {
+      case 'VIDSRC':
+        embedLink = `//embtaku.com/streaming.php?id=${selectedEpisodeId}`;
+        break;
+      case 'HANIME':
+        embedLink = `//nhplayer.com/v/${selectedEpisodeId}`;
+        break;
+      case 'STREAMTAPE':
+        embedLink = `//streamtape.com/e/${selectedEpisodeId}`;
+        break;
+      case 'mp4upload':
+        embedLink = `//mp4upload.com/v/${selectedEpisodeId}`;
+        break;
+      case 'other':
+        embedLink = `//other.com/v/${selectedEpisodeId}`;
+        break;
+      case 'EMBTAKU': // Changed case for URL source
+        // Make a request to playtaku.net to fetch the actual embed link
         try {
-            const response = await fetch(`${baseUrls[src]}${videoId}`);
-            if (!response.ok) {
-                // If the page does not exist or the response is not ok
-                return placeholderImage;
-            }
-            const text = await response.text();
-            const parser = new DOMParser();
-            const doc = parser.parseFromString(text, &#39;text/html&#39;);
-            const iframe = doc.querySelector(&#39;iframe&#39;);
-            const embedUrl = iframe ? iframe.src : &#39;&#39;; // Extract the src of the iframe
-            return embedUrl || placeholderImage; // Return embed URL or placeholder image if not found
+          const response = await fetch(`//playtaku.net/videos/${selectedEpisodeId}`);
+          const html = await response.text();
+          
+          // Use DOMParser to parse the response and extract the embed URL
+          const parser = new DOMParser();
+          const doc = parser.parseFromString(html, 'text/html');
+          const embedElement = doc.querySelector('iframe'); // Assuming the embed link is in an iframe
+          
+          if (embedElement) {
+            embedLink = embedElement.src; // Extract the embed URL from the iframe
+          } else {
+            throw new Error('Embed link not found');
+          }
         } catch (error) {
-            console.error(&#39;Error fetching embed URL:&#39;, error);
-            return placeholderImage; // Return placeholder image if there was an error
+          alert("Error fetching embed link: " + error.message);
+          return;
         }
-    } else {
-        return baseUrls[src] + videoId;
+        break;
+      default:
+        alert("Invalid source selected!");
+        return;
     }
+
+    console.log("Generated Embed Link: ", embedLink);
+
+    // Replace the poster and overlay with the actual video
+    const embedVideoContainer = document.querySelector('.embed-video');
+    embedVideoContainer.innerHTML = `<iframe src="${embedLink}" frameborder="0" allowfullscreen style="width: 100%; height: 100%;"></iframe>`;
+  } else {
+    alert("Select an episode and a source to dive into the story!");
+  }
 }
 
-// Function to open the modal
-function openModal(episode, type, embedUrl) {
-    const modal = document.getElementById(&#39;episode-modal&#39;);
-    const modalTitle = document.getElementById(&#39;modal-title&#39;);
-    const videoEmbed = document.getElementById(&#39;video-embed&#39;);
-
-    modalTitle.textContent = `Episode ${episode} - ${type}`;
-    videoEmbed.src = embedUrl;
-
-    modal.style.display = &#39;block&#39;;
-}
-
-// Function to close the modal and stop the video
+// Close Modal and Stop Video
 function closeModal() {
-    const modal = document.getElementById(&#39;episode-modal&#39;);
-    const videoEmbed = document.getElementById(&#39;video-embed&#39;);
+  const modal = document.getElementById('animeModal');
+  modal.style.display = 'none';
 
-    modal.style.display = &#39;none&#39;;
-    videoEmbed.src = &#39;&#39;; // Stop the video
+  // Stop the video by resetting the iframe src
+  const embedVideoContainer = document.querySelector('.embed-video');
+  const iframe = embedVideoContainer.querySelector('iframe');
+
+  // Check if iframe exists and reset its src to stop the video
+  if (iframe) {
+    iframe.src = ''; // Reset the iframe src to stop video playback
+  }
+  
+  // Optionally reset the embed video container's content
+  embedVideoContainer.innerHTML = `
+    <img src="${animeImage}" alt="${anime.title}" class="embed-video-placeholder">
+    <div class="overlay-text">Please select the episode below.</div>
+  `;
 }
 
-// Add event listener for modal close button
-document.querySelector(&#39;.modal .close&#39;).addEventListener(&#39;click&#39;, closeModal);
 
-// Close the modal when clicking outside of the modal content
-window.addEventListener(&#39;click&#39;, function(event) {
-    if (event.target === document.getElementById(&#39;episode-modal&#39;)) {
-        closeModal();
-    }
+// Clear Filters
+function clearFilters() {
+  document.querySelectorAll('#genreDropdown input[type="checkbox"]:checked').forEach(checkbox => checkbox.checked = false);
+  searchAnime();
+}
+
+// Handle Search
+function searchAnime() {
+  page = 1; // Reset page when searching
+  const query = document.getElementById('animeSearch').value;
+  const selectedGenres = getSelectedGenres();
+  fetchAnime(query, selectedGenres, page);
+}
+
+// Infinite Scroll
+window.addEventListener('scroll', () => {
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 100 && !isLoading) {
+    page++;
+    const query = document.getElementById('animeSearch').value;
+    const selectedGenres = getSelectedGenres();
+    fetchAnime(query, selectedGenres, page);
+  }
 });
 
-// Infinite scrolling
-window.addEventListener(&#39;scroll&#39;, () =&gt; {
-    if (window.innerHeight + window.scrollY &gt;= document.body.offsetHeight - 100) {
-        loadResults(); // Load more results when scrolled to the bottom
-    }
-});
-
-// Fetch and display genres on page load
+// Initialize
 fetchGenres();
+fetchAnime();
+fetchEpisodeData(); // Fetch the JSON file with episode data
+
+// Extract VIDEOID from the source URL (based on user-provided URL)
+function extractVideoIdFromUrl(url) {
+  var videoId = url.split('/').pop();
+  return videoId;
+}
+
+// Event listener for modal closure
+$('#video-modal').on('hidden.bs.modal', function() {
+  $('#video-modal .modal-body').html('');
+});
