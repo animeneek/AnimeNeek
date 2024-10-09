@@ -76,7 +76,7 @@ async function fetchAnime(query = '', genres = [], page = 1) {
     const genreQuery = genres.length ? `&genres=${genres.join(',')}` : '';
     const hentaiFilter = hentaiFilterOn ? '' : '&sfw=true'; // Apply the hentai filter if off
 
-    const url = `https://api.jikan.moe/v4/anime?q=${query}&limit=25&page=${page}${genreQuery}${hentaiFilter}`;
+    const url = `https://api.jikan.moe/v4/anime?q=${query}&limit=25&page=${page}${genreQuery}${hentaiFilter}&order_by=popularity`;
     const response = await fetch(url);
     const data = await response.json();
 
