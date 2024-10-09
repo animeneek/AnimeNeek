@@ -94,6 +94,11 @@ async function fetchAnime(query = '', genres = [], page = 1) {
   }
 }
 
+// Sort by popularity (descending): &amp;order_by=popularity&amp;sort=desc
+// Sort by score (ascending): &amp;order_by=score&amp;sort=asc
+// Sort by the number of episodes: &amp;order_by=episodes&amp;sort=desc
+// Sort by Start date: &amp;order_by=start_date&amp;sort=desc
+// Sort by Ratin: &amp;order_by=score&amp;sort=desc
 
 // Display Anime Results
 function displayAnime(animeList) {
