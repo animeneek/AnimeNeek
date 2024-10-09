@@ -1,46 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AniNeek Streaming</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AniNeek Streaming</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- FontAwesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 </head>
 <body>
-    <header>
-        <a href='#' id='home-link'>
-            <img alt='Anime Search Logo' id='logo' src='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLtR-0AhORmFcP6S48BPR2He1JIz1ibnsvWTtfSTnGfJygjZt2uwgIZXNaaOfhjFvTYxRz8c1MQLafYEBE1x5JwhkndavGeT74U1d1nbSx69HBFCmzmsKl31z6Y-4V48J7Z-ZkI2f5yke1WJ3aaPbivcJZn5CqMltwvwtZArz8zqq7__xweKD6eQ8twuU/s502/AniNeek_Logo%20copy.png'/>
-        </a>
-    </header>
+  <!-- Toggle Dark/Light Mode -->
+  <div id="themeToggle" onclick="toggleTheme()">
+    <i id="themeIcon" class="fas fa-moon"></i>
+  </div>
 
-    <!-- Search Section -->
-    <section id="search-section">
-        <input type="text" id="anime-search" placeholder="Search for anime...">
-    </section>
-
-    <!-- Genre Filter Section -->
-    <section id="genre-filter">
-        <h2>Filter by Genre</h2>
-    </section>
-
-    <!-- Results Section -->
-    <section id="results"></section>
-
-    <!-- Modal for Episode Player -->
-    <div id="episode-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h3 id="modal-title">Episode Title</h3>
-            <iframe id="video-embed" frameborder="0" allowfullscreen></iframe>
-        </div>
+  <div class="container">
+    <!-- Logo -->
+    <div class="logo">
+      <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjLtR-0AhORmFcP6S48BPR2He1JIz1ibnsvWTtfSTnGfJygjZt2uwgIZXNaaOfhjFvTYxRz8c1MQLafYEBE1x5JwhkndavGeT74U1d1nbSx69HBFCmzmsKl31z6Y-4V48J7Z-ZkI2f5yke1WJ3aaPbivcJZn5CqMltwvwtZArz8zqq7__xweKD6eQ8twuU/s502/AniNeek_Logo%20copy.png" alt="AniNeek Logo">
     </div>
 
-    <button id="back-to-top">Back to Top</button>
+    <!-- Search Box -->
+    <input type="text" id="animeSearch" placeholder="Search for Anime..." oninput="searchAnime()" />
+<br>
+    <!-- Genre Filter and Clear Filter Button -->
+    <div class="filter-section">
+      <div class="dropdown">
+        <button class="dropbtn">Select Genres</button>
+        <div id="genreDropdown" class="dropdown-content">
+          <!-- Genres will be populated here by JS -->
+        </div>
+      </div>
+      <button class="clear-filter-btn" onclick="clearFilters()">Clear Filter</button>
+    </div>
 
-    <script src="script.js"></script>
-    <script src="./script.js"></script>
+    <!-- Anime Results Section -->
+    <div id="animeResults" class="anime-results"></div>
 
+    <!-- No Results Message -->
+    <p id="noResults" style="display:none;">No epic tales found! Let’s search for something new!</p>
+  </div>
+  
+<!-- Modal for Anime Details -->
+<div id="animeModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalAnimeContent">
+      <!-- Content will be injected here via JavaScript -->
+    </div>
+  </div>
+</div>
+
+  <script src="script.js"></script>
 </body>
 </html>
