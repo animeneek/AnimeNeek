@@ -912,8 +912,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 24,
-        "data-src": "URL",
-        "data-video-id": "a-terrified-teacher-at-ghoul-school-episode-24"
+        "data-src": "anime",
+        "data-video-id": "31247"
       }
     ]
   },
@@ -1578,8 +1578,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 24,
-        "data-src": "URL",
-        "data-video-id": "tying-the-knot-with-an-amagami-sister-episode-24"
+        "data-src": "anime",
+        "data-video-id": "31250"
       },
       {
         "data-ep-lan": "Dub",
@@ -1794,14 +1794,14 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 11,
-        "data-src": "URL",
-        "data-video-id": "ameku-m-d-doctor-detective-episode-11"
+        "data-src": "anime",
+        "data-video-id": "31288"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "ameku-m-d-doctor-detective-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31415"
       },
       {
         "data-ep-lan": "Dub",
@@ -2052,8 +2052,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "anyway-im-falling-in-love-with-you-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31308"
       },
       {
         "data-ep-lan": "Dub",
@@ -2868,8 +2868,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "aquarion-myth-of-emotions-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31304"
       }
     ]
   },
@@ -4134,8 +4134,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 13,
-        "data-src": "URL",
-        "data-video-id": "ave-mujica-the-die-is-cast-episode-13"
+        "data-src": "anime",
+        "data-video-id": "31300"
       }
     ]
   },
@@ -4212,8 +4212,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "babanbabanban-vampire-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31338"
       }
     ]
   },
@@ -5116,6 +5116,18 @@
         "data-video-id": "31079"
       },
       {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 73,
+        "data-src": "anime",
+        "data-video-id": "31315"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 74,
+        "data-src": "anime",
+        "data-video-id": "31420"
+      },
+      {
         "data-ep-lan": "Dub",
         "data-ep-num": "1",
         "data-src": "anime",
@@ -5546,6 +5558,18 @@
         "data-ep-num": 72,
         "data-src": "URL",
         "data-video-id": "beyblade-x-dub-episode-72"
+      },
+      {
+        "data-ep-lan": "Dub",
+        "data-ep-num": 73,
+        "data-src": "URL",
+        "data-video-id": "beyblade-x-dub-episode-73"
+      },
+      {
+        "data-ep-lan": "Dub",
+        "data-ep-num": 74,
+        "data-src": "URL",
+        "data-video-id": "beyblade-x-dub-episode-74"
       }
     ]
   },
@@ -13416,8 +13440,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 24,
-        "data-src": "URL",
-        "data-video-id": "blue-miburo-episode-24"
+        "data-src": "anime",
+        "data-video-id": "31336"
       }
     ]
   },
@@ -17328,8 +17352,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 11,
-        "data-src": "URL",
-        "data-video-id": "cardfight-vanguard-divinez-deluxe-hen-episode-11"
+        "data-src": "anime",
+        "data-video-id": "31334"
       },
       {
         "data-ep-lan": "Sub",
@@ -27786,8 +27810,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "dr-stone-science-future-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31296"
       },
       {
         "data-ep-lan": "Dub",
@@ -35292,8 +35316,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "even-given-the-worthless-appraiser-class-im-actually-the-strongest-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31298"
       }
     ]
   },
@@ -37968,8 +37992,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "farmagia-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31319"
       }
     ]
   },
@@ -39540,8 +39564,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "flower-and-asura-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31253"
       }
     ]
   },
@@ -39960,8 +39984,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "from-bureaucrat-to-villainess-dads-been-reincarnated-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31303"
       }
     ]
   },
@@ -40596,8 +40620,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 13,
-        "data-src": "URL",
-        "data-video-id": "grisaia-phantom-trigger-episode-13"
+        "data-src": "anime",
+        "data-video-id": "31283"
       }
     ]
   },
@@ -42528,14 +42552,14 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 50,
-        "data-src": "URL",
-        "data-video-id": "himitsu-no-aipri-episode-50"
+        "data-src": "anime",
+        "data-video-id": "31332"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 51,
-        "data-src": "URL",
-        "data-video-id": "himitsu-no-aipri-episode-51"
+        "data-src": "anime",
+        "data-video-id": "31433"
       }
     ]
   },
@@ -42612,8 +42636,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "honey-lemon-soda-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31289"
       },
       {
         "data-ep-lan": "Dub",
@@ -45312,8 +45336,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 11,
-        "data-src": "URL",
-        "data-video-id": "i-left-my-a-rank-party-to-help-my-former-students-reach-the-dungeon-depths-episode-11"
+        "data-src": "anime",
+        "data-video-id": "31345"
       },
       {
         "data-ep-lan": "Sub",
@@ -45468,8 +45492,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "i-may-be-a-guild-receptionist-but-ill-solo-any-boss-to-clock-out-on-time-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31324"
       },
       {
         "data-ep-lan": "Dub",
@@ -46206,8 +46230,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 13,
-        "data-src": "URL",
-        "data-video-id": "im-living-with-an-otaku-neet-kunoichi-episode-13"
+        "data-src": "anime",
+        "data-video-id": "31347"
       },
       {
         "data-ep-lan": "Sub",
@@ -46824,8 +46848,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "ishura-2nd-season-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31279"
       },
       {
         "data-ep-lan": "Dub",
@@ -48086,6 +48110,30 @@
         "data-ep-num": "98",
         "data-src": "anime",
         "data-video-id": "30856"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 99,
+        "data-src": "anime",
+        "data-video-id": "31255"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 100,
+        "data-src": "anime",
+        "data-video-id": "31257"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 101,
+        "data-src": "anime",
+        "data-video-id": "31259"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 102,
+        "data-src": "anime",
+        "data-video-id": "31261"
       }
     ]
   },
@@ -48234,8 +48282,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "the-100-girlfriends-who-really-really-really-really-really-love-you-season-2-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31373"
       }
     ]
   },
@@ -48872,6 +48920,30 @@
         "data-ep-num": "66",
         "data-src": "anime",
         "data-video-id": "30858"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 67,
+        "data-src": "anime",
+        "data-video-id": "31263"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 68,
+        "data-src": "anime",
+        "data-video-id": "31265"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 69,
+        "data-src": "URL",
+        "data-video-id": "lingwu-continent-episode-69-english-subbed"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 70,
+        "data-src": "URL",
+        "data-video-id": "lingwu-continent-episode-70-english-subbed"
       }
     ]
   },
@@ -49266,8 +49338,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "magic-maker-how-to-make-magic-in-another-world-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31285"
       },
       {
         "data-ep-lan": "Dub",
@@ -50118,8 +50190,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 13,
-        "data-src": "URL",
-        "data-video-id": "medalist-episode-13"
+        "data-src": "anime",
+        "data-video-id": "31349"
       },
       {
         "data-ep-lan": "Dub",
@@ -50484,8 +50556,68 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 13,
+        "data-src": "anime",
+        "data-video-id": "31302"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 61334,
+    "data-mal-title": "Momentary Lily: Tsuzuiteiku Kappou, Kappou!",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31429"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31431"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59360,
+    "data-mal-title": "Rock wa Lady no Tashinami deshite (Rock Is a Lady's Modesty)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31427"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
         "data-src": "URL",
-        "data-video-id": "momentary-lily-episode-13"
+        "data-video-id": "rock-is-a-ladys-modesty-episode-2-english-subbed"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "rock-is-a-ladys-modesty-episode-3-english-subbed"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "rock-is-a-ladys-modesty-episode-4-english-subbed"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "rock-is-a-ladys-modesty-episode-5-english-subbed"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "rock-is-a-ladys-modesty-episode-6-english-subbed"
       }
     ]
   },
@@ -51228,14 +51360,14 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "my-happy-marriage-season-2-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31389"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 13,
         "data-src": "URL",
-        "data-video-id": "my-happy-marriage-season-2-episode-12"
+        "data-video-id": "my-happy-marriage-season-2-episode-13"
       },
       {
         "data-ep-lan": "Dub",
@@ -69820,6 +69952,18 @@
         "data-video-id": "5949"
       },
       {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1123,
+        "data-src": "URL",
+        "data-video-id": "one-piece-episode-1123"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1124,
+        "data-src": "anime",
+        "data-video-id": "31507"
+      },
+      {
         "data-ep-lan": "Dub",
         "data-ep-num": "1",
         "data-src": "anime",
@@ -76550,6 +76694,18 @@
         "data-ep-num": 1122,
         "data-src": "URL",
         "data-video-id": "one-piece-dub-episode-1122"
+      },
+      {
+        "data-ep-lan": "Dub",
+        "data-ep-num": 1123,
+        "data-src": "URL",
+        "data-video-id": "one-piece-dub-episode-1123"
+      },
+      {
+        "data-ep-lan": "Dub",
+        "data-ep-num": 1124,
+        "data-src": "URL",
+        "data-video-id": "one-piece-dub-episode-1124"
       }
     ]
   },
@@ -76686,8 +76842,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 21,
-        "data-src": "URL",
-        "data-video-id": "one-piece-log-fish-man-island-saga-episode-21"
+        "data-src": "anime",
+        "data-video-id": "31352"
       }
     ]
   },
@@ -77336,6 +77492,12 @@
         "data-ep-num": 12,
         "data-src": "anime",
         "data-video-id": "31180"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 13,
+        "data-src": "anime",
+        "data-video-id": "31340"
       }
     ]
   },
@@ -79104,8 +79266,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 35,
-        "data-src": "URL",
-        "data-video-id": "punirunes-2-episode-25"
+        "data-src": "anime",
+        "data-video-id": "31362"
       }
     ]
   },
@@ -80640,8 +80802,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 16,
-        "data-src": "URL",
-        "data-video-id": "rezero-starting-life-in-another-world-season-3-episode-16"
+        "data-src": "anime",
+        "data-video-id": "31281"
       },
       {
         "data-ep-lan": "Dub",
@@ -82620,8 +82782,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 25,
-        "data-src": "URL",
-        "data-video-id": "shangri-la-frontier-season-2-episode-25"
+        "data-src": "anime",
+        "data-video-id": "31369"
       }
     ]
   },
@@ -85398,8 +85560,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 24,
-        "data-src": "URL",
-        "data-video-id": "tales-of-herding-gods-episode-24"
+        "data-src": "anime",
+        "data-video-id": "31381"
       },
       {
         "data-ep-lan": "Sub",
@@ -86748,14 +86910,14 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "the-apothecary-diaries-season-2-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31321"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 13,
-        "data-src": "URL",
-        "data-video-id": "the-apothecary-diaries-season-2-episode-13"
+        "data-src": "anime",
+        "data-video-id": "31472"
       },
       {
         "data-ep-lan": "Sub",
@@ -87192,14 +87354,14 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "the-daily-life-of-a-middle-aged-online-shopper-in-another-world-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31294"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 13,
-        "data-src": "URL",
-        "data-video-id": "the-daily-life-of-a-middle-aged-online-shopper-in-another-world-episode-13"
+        "data-src": "anime",
+        "data-video-id": "31422"
       }
     ]
   },
@@ -88398,14 +88560,14 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 9,
-        "data-src": "URL",
-        "data-video-id": "the-laid-off-demon-king-episode-9"
+        "data-src": "anime",
+        "data-video-id": "31383"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 10,
-        "data-src": "URL",
-        "data-video-id": "the-laid-off-demon-king-episode-10"
+        "data-src": "anime",
+        "data-video-id": "31385"
       },
       {
         "data-ep-lan": "Sub",
@@ -90330,8 +90492,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "the-red-ranger-becomes-an-adventurer-in-another-world-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31377"
       },
       {
         "data-ep-lan": "Dub",
@@ -91010,6 +91172,42 @@
         "data-ep-num": "58",
         "data-src": "anime",
         "data-video-id": "30729"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 59,
+        "data-src": "anime",
+        "data-video-id": "31267"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 60,
+        "data-src": "anime",
+        "data-video-id": "31269"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 61,
+        "data-src": "anime",
+        "data-video-id": "31271"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 62,
+        "data-src": "anime",
+        "data-video-id": "31273"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 63,
+        "data-src": "anime",
+        "data-video-id": "31275"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 64,
+        "data-src": "anime",
+        "data-video-id": "31277"
       }
     ]
   },
@@ -91512,8 +91710,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "toilet-bound-hanako-kun-season-2-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31371"
       }
     ]
   },
@@ -92040,20 +92238,20 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 21,
-        "data-src": "URL",
-        "data-video-id": "touhai-ura-rate-mahjong-touhai-roku-episode-21"
+        "data-src": "anime",
+        "data-video-id": "31327"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 22,
-        "data-src": "URL",
-        "data-video-id": "touhai-ura-rate-mahjong-touhai-roku-episode-22"
+        "data-src": "anime",
+        "data-video-id": "31329"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 23,
-        "data-src": "URL",
-        "data-video-id": "touhai-ura-rate-mahjong-touhai-roku-episode-23"
+        "data-src": "anime",
+        "data-video-id": "31489"
       },
       {
         "data-ep-lan": "Sub",
@@ -92460,14 +92658,14 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 25,
-        "data-src": "URL",
-        "data-video-id": "trillion-game-episode-25"
+        "data-src": "anime",
+        "data-video-id": "31310"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 26,
-        "data-src": "URL",
-        "data-video-id": "trillion-game-episode-26"
+        "data-src": "anime",
+        "data-video-id": "31313"
       },
       {
         "data-ep-lan": "Dub",
@@ -93084,8 +93282,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "ubel-blatt-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31323"
       }
     ]
   },
@@ -93104,42 +93302,6 @@
         "data-ep-num": 2,
         "data-src": "anime",
         "data-video-id": "31182"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
       },
       {
         "data-ep-lan": null,
@@ -93252,8 +93414,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 10,
-        "data-src": "URL",
-        "data-video-id": "uniteup-unibirth-episode-10"
+        "data-src": "anime",
+        "data-video-id": "31342"
       },
       {
         "data-ep-lan": "Sub",
@@ -93342,8 +93504,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "unnamed-memory-season-2-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31249"
       }
     ]
   },
@@ -94242,8 +94404,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "welcome-to-japan-ms-elf-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31317"
       }
     ]
   },
@@ -94632,8 +94794,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "witchy-pretty-cure-season-2-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31357"
       }
     ]
   },
@@ -94688,6 +94850,30 @@
         "data-ep-num": 22,
         "data-src": "anime",
         "data-video-id": "31109"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 23,
+        "data-src": "anime",
+        "data-video-id": "31401"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 24,
+        "data-src": "anime",
+        "data-video-id": "31404"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 25,
+        "data-src": "URL",
+        "data-video-id": "world-of-immortals-episode-25"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 26,
+        "data-src": "URL",
+        "data-video-id": "world-of-immortals-episode-26"
       }
     ]
   },
@@ -95080,7 +95266,7 @@
         "data-video-id": "30384"
       },
       {
-        "data-ep-lan": null,
+        "data-ep-lan": "Sub",
         "data-ep-num": "11 (Mirror 2)",
         "data-src": "anime",
         "data-video-id": "25562"
@@ -95104,7 +95290,7 @@
         "data-video-id": "30667"
       },
       {
-        "data-ep-lan": null,
+        "data-ep-lan": "Sub",
         "data-ep-num": "15",
         "data-src": "anime",
         "data-video-id": "30932"
@@ -95160,8 +95346,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 8,
-        "data-src": "URL",
-        "data-video-id": "you-and-idol-precure%e2%99%aa-episode-8"
+        "data-src": "anime",
+        "data-video-id": "31355"
       },
       {
         "data-ep-lan": "Sub",
@@ -95780,6 +95966,42 @@
         "data-ep-num": "145",
         "data-src": "anime",
         "data-video-id": "28561"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 146,
+        "data-src": "URL",
+        "data-video-id": "yu%e2%98%86gi%e2%98%86oh-go-rush-episode-146"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 147,
+        "data-src": "URL",
+        "data-video-id": "yu%e2%98%86gi%e2%98%86oh-go-rush-episode-147"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 148,
+        "data-src": "URL",
+        "data-video-id": "yu%e2%98%86gi%e2%98%86oh-go-rush-episode-148"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 149,
+        "data-src": "URL",
+        "data-video-id": "yu%e2%98%86gi%e2%98%86oh-go-rush-episode-149"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 150,
+        "data-src": "URL",
+        "data-video-id": "yu%e2%98%86gi%e2%98%86oh-go-rush-episode-150"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 151,
+        "data-src": "anime",
+        "data-video-id": "31367"
       }
     ]
   },
@@ -96080,6 +96302,2442 @@
         "data-ep-num": "12",
         "data-src": "anime",
         "data-video-id": "24525"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60094,
+    "data-mal-title": "Kankin Kuiki Level X 2nd Season (Lockdown Zone: Lv. X Season 2)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31237"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31239"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "anime",
+        "data-video-id": "31241"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "anime",
+        "data-video-id": "31243"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "anime",
+        "data-video-id": "31245"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "anime",
+        "data-video-id": "31359"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 56038,
+    "data-mal-title": "Lazarus",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31501"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-12"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 13,
+        "data-src": "URL",
+        "data-video-id": "lazarus-episode-13"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60083,
+    "data-mal-title": "Kowloon Generic Romance",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31499"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-12"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 13,
+        "data-src": "URL",
+        "data-video-id": "kowloon-generic-romance-episode-13"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60334,
+    "data-mal-title": "Anne Shirley",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31497"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-12"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 13,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-13"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 14,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-14"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 15,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-15"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 16,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-16"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 17,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-17"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 18,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-18"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 19,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-19"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 20,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-20"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 21,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-21"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 22,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-22"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 23,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-23"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 24,
+        "data-src": "URL",
+        "data-video-id": "anne-shirley-episode-24"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 58812,
+    "data-mal-title": "Shin Samurai-den Yaiba (Yaiba: Samurai Legend)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31495"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "yaiba-samurai-legend-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "yaiba-samurai-legend-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "yaiba-samurai-legend-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "yaiba-samurai-legend-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "yaiba-samurai-legend-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60377,
+    "data-mal-title": "Nazotoki wa Dinner no Ato de (The Dinner Table Detective)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31493"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "the-dinner-table-detective-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60140,
+    "data-mal-title": "Kanchigai no Atelier Meister: Eiyuu Party no Moto Zatsuyougakari ga, Jitsu wa Sentou Igai ga SSS Rank Datta to Iu Yoku Aru Hanashi",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "1 (Mirror 1)",
+        "data-src": "anime",
+        "data-video-id": "31375"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "2 (Mirror 1)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-master-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "3 (Mirror 1)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-master-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "4 (Mirror 1)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-master-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "5 (Mirror 1)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-master-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "6 (Mirror 1)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-master-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "1 (Mirror 2)",
+        "data-src": "anime",
+        "data-video-id": "31505"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "2 (Mirror 2)",
+        "data-src": "anime",
+        "data-video-id": "31513"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "3 (Mirror 2)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-meister-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "4 (Mirror 2)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-meister-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "5 (Mirror 2)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-meister-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "6 (Mirror 2)",
+        "data-src": "URL",
+        "data-video-id": "the-unaware-atelier-meister-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60146,
+    "data-mal-title": "Saikyou no Ousama, Nidome no Jinsei wa Nani wo Suru?",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31365"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "the-beginning-after-the-end-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "the-beginning-after-the-end-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "the-beginning-after-the-end-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "the-beginning-after-the-end-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "the-beginning-after-the-end-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 61293,
+    "data-mal-title": "Koisuru One Piece",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31399"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31418"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "anime",
+        "data-video-id": "31435"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "anime",
+        "data-video-id": "31491"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "koisuru-one-piece-episode-5-english-sub"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60293,
+    "data-mal-title": "Ballpark de Tsukamaete! (Catch Me at the Ballpark!)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31394"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "catch-me-at-the-ballpark-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59169,
+    "data-mal-title": "Aru Majo ga Shinu Made (Once Upon a Witch's Death)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31392"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "until-the-witch-dies-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 58359,
+    "data-mal-title": "Isshun de Chiryou shiteita noni Yakutatazu to Tsuihou sareta Tensai Chiyushi, Yami Healer toshite Tanoshiku Ikiru",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31425"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 55995,
+    "data-mal-title": "Your Forma",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31413"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "your-forma-episode-2-english-sub"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "your-forma-episode-3-english-sub"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "your-forma-episode-4-english-sub"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "your-forma-episode-5-english-sub"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "your-forma-episode-6-english-sub"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60157,
+    "data-mal-title": "Kanpekisugite Kawaige ga Nai to Konyaku Haki sareta Seijo wa Ringoku ni Urareru",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31411"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "the-too-perfect-saint-tossed-aside-by-my-fiance-and-sold-to-another-kingdom-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "the-too-perfect-saint-tossed-aside-by-my-fiance-and-sold-to-another-kingdom-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "the-too-perfect-saint-tossed-aside-by-my-fiance-and-sold-to-another-kingdom-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "the-too-perfect-saint-tossed-aside-by-my-fiance-and-sold-to-another-kingdom-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "the-too-perfect-saint-tossed-aside-by-my-fiance-and-sold-to-another-kingdom-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59457,
+    "data-mal-title": "Haite Kudasai, Takamine-san (Please Put Them On, Takamine-san)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31409"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "please-put-them-on-takamine-san-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 8123,
+    "data-mal-title": "Cooking Papa",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31407"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-12"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 13,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-13"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 14,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-14"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 15,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-15"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 16,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-16"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 17,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-17"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 18,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-18"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 19,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-19"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 20,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-20"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 21,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-21"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 22,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-22"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 23,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-23"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 24,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-24"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 25,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-25"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 26,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-26"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 27,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-27"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 28,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-28"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 29,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-29"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 30,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-30"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 31,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-31"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 32,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-32"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 33,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-33"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 34,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-34"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 35,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-35"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 36,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-36"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 37,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-37"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 38,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-38"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 39,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-39"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 40,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-40"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 41,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-41"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 42,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-42"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 43,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-43"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 44,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-44"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 45,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-45"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 46,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-46"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 47,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-47"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 48,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-48"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 49,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-49"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 50,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-50"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 51,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-51"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 52,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-52"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 53,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-53"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 54,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-54"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 55,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-55"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 56,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-56"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 57,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-57"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 58,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-58"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 59,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-59"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 60,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-60"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 61,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-61"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 62,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-62"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 63,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-63"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 64,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-64"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 65,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-65"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 66,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-66"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 67,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-67"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 68,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-68"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 69,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-69"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 70,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-70"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 71,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-71"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 72,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-72"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 73,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-73"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 74,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-74"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 75,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-75"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 76,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-76"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 77,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-77"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 78,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-78"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 79,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-79"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 80,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-80"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 81,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-81"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 82,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-82"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 83,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-83"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 84,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-84"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 85,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-85"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 86,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-86"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 87,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-87"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 88,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-88"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 89,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-89"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 90,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-90"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 91,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-91"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 92,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-92"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 93,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-93"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 94,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-94"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 95,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-95"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 96,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-96"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 97,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-97"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 98,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-98"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 99,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-99"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 100,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-100"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 101,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-101"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 102,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-102"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 103,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-103"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 104,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-104"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 105,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-105"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 106,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-106"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 107,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-107"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 108,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-108"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 109,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-109"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 110,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-110"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 111,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-111"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 112,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-112"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 113,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-113"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 114,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-114"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 115,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-115"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 116,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-116"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 117,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-117"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 118,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-118"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 119,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-119"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 120,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-120"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 121,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-121"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 122,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-122"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 123,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-123"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 124,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-124"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 125,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-125"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 126,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-126"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 127,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-127"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 128,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-128"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 129,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-129"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 130,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-130"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 131,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-131"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 132,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-132"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 133,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-133"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 134,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-134"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 135,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-135"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 136,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-136"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 137,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-137"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 138,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-138"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 139,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-139"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 140,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-140"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 141,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-141"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 142,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-142"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 143,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-143"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 144,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-144"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 145,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-145"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 146,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-146"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 147,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-147"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 148,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-148"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 149,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-149"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 150,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-150"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 151,
+        "data-src": "URL",
+        "data-video-id": "cooking-papa-episode-151"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60057,
+    "data-mal-title": "Chao Neng Lifang: Chaofan Pian (The Super Cube)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31441"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31443"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "anime",
+        "data-video-id": "31445"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "anime",
+        "data-video-id": "31447"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "anime",
+        "data-video-id": "31449"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "the-super-cube-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "the-super-cube-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "the-super-cube-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "the-super-cube-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "the-super-cube-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "the-super-cube-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "the-super-cube-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59819,
+    "data-mal-title": "Bye Bye, Earth 2nd Season",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31470"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "bye-bye-earth-season-2-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "bye-bye-earth-season-2-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "bye-bye-earth-season-2-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "bye-bye-earth-season-2-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "bye-bye-earth-season-2-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 52709,
+    "data-mal-title": "Danjo no Yuujou wa Seiritsu suru? (Iya, Shinai!!)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31468"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "can-a-boy-and-girl-friendship-hold-up-no-it-cant-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "can-a-boy-and-girl-friendship-hold-up-no-it-cant-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "can-a-boy-and-girl-friendship-hold-up-no-it-cant-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "can-a-boy-and-girl-friendship-hold-up-no-it-cant-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "can-a-boy-and-girl-friendship-hold-up-no-it-cant-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 1726,
+    "data-mal-title": "Devil May Cry",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31452"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31454"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "anime",
+        "data-video-id": "31456"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "anime",
+        "data-video-id": "31458"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "anime",
+        "data-video-id": "31460"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "anime",
+        "data-video-id": "31462"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "anime",
+        "data-video-id": "31464"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "anime",
+        "data-video-id": "31466"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "devil-may-cry-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "devil-may-cry-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "devil-may-cry-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "devil-may-cry-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 51818,
+    "data-mal-title": "Enen no Shouboutai: San no Shou (Fire Force Season 3)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31484"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "fire-force-season-3-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 55779,
+    "data-mal-title": "Cocoon: Aru Natsu no Shoujo-tachi yori",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31480"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59744,
+    "data-mal-title": "Maebashi Witches",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31503"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "maebashi-witches-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "maebashi-witches-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "maebashi-witches-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "maebashi-witches-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "maebashi-witches-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59745,
+    "data-mal-title": "Chotto dake Ai ga Omoi Dark Elf ga Isekai kara Oikaketekita",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31511"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "yandere-dark-elf-she-chased-me-all-the-way-from-another-world-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "yandere-dark-elf-she-chased-me-all-the-way-from-another-world-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "yandere-dark-elf-she-chased-me-all-the-way-from-another-world-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "yandere-dark-elf-she-chased-me-all-the-way-from-another-world-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "yandere-dark-elf-she-chased-me-all-the-way-from-another-world-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59935,
+    "data-mal-title": "Gorilla no Kami kara Kago sareta Reijou wa Ouritsu Kishidan de Kawaigarareru",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31509"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "the-gorilla-gods-go-to-girl-episode-12"
       }
     ]
   }
