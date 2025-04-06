@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     async function fetchAnimeDetails(id) {
-        const response = await fetch(`https://raw.githubusercontent.com/animeneek/anineek/main/animeneek.json`);
+        const response = await fetch(`https://raw.githubusercontent.com/animeneek/AnimeNeek/main/animeneek.json`);
         const data = await response.json();
         return data.find(anime => anime["data-mal-id"] === id);
     }
