@@ -1,0 +1,1009 @@
+@import url('https://fonts.googleapis.com/css2?family=Neucha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tektur&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css'); /* Font Awesome for icons */
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    background-color: #111;
+    color: #fff;
+    transition: background 0.3s, color 0.3s;
+    padding: 20px; /* Added padding for better appearance */
+}
+
+/* Loading Indicator */
+.loading-indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: #fff;
+    display: none;
+}
+
+/* Header Styling */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #222;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Main Content */
+main {
+    margin-top: 80px; /* Adjust this value based on your header height */
+}
+
+/* Search Title Styling */
+#searchTitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Logo */
+#logo {
+    height: 40px;
+}
+
+/* Search Container */
+.search-container {
+    display: flex;
+    align-items: center;
+    background: #333;
+    padding: 5px;
+    border-radius: 20px;
+    width: 300px;
+}
+
+#searchBox {
+    border: none;
+    outline: none;
+    padding: 8px;
+    flex-grow: 1;
+    font-size: 14px;
+    background: transparent;
+    color: #fff;
+}
+
+/* Search & Random Button Styling */
+#searchButton, #randomButton {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+}
+
+#searchButton img, #randomButton img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Icon Styling */
+.icon {
+    color: #ffffff;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start; /* Left-align the items */
+}
+
+/* Anime Item Styling */
+.anime-item {
+    position: relative;
+    border: 1px solid #444;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    background: #222;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 150px; /* Set a fixed width */
+    height: 250px; /* Set a fixed height */
+}
+
+.anime-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.poster-container {
+    position: relative;
+    width: 100%;
+    height: 70%; /* Adjust height to fit within the fixed dimensions */
+    overflow: hidden;
+}
+
+.poster-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.poster-container:hover .overlay {
+    opacity: 1;
+}
+
+.anime-item img.anime-poster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the container */
+}
+
+.anime-title {
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0;
+    text-align: center;
+    white-space: nowrap; /* Prevent title from wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.anime-details {
+    font-size: 10px;
+    color: #aaa;
+    margin: 10px 0;
+    display: flex;
+    justify-content: center; /* Center details */
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.anime-details-slider {
+    font-size: 12px;
+    color: #aaa;
+    margin: 10px 0;
+    display: flex;
+    justify-content: left; /* Center details */
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.detail-box {
+    background: #333;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.detail-box.sub {
+    background: #4caf50;
+    color: white;
+}
+
+.detail-box.dub {
+    background: #2196f3;
+    color: white;
+}
+
+.detail-box.raw {
+    background: #ff9800;
+    color: white;
+}
+
+.detail-box.hen {
+    background: #ff4444;
+    color: white;
+}
+
+/* Play Button on Hover */
+.anime-item .play-button {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.poster-container:hover .play-button {
+    display: block;
+}
+
+/* Pagination */
+#pagination {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.pagination-link {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border: 1px solid #444;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    background: #333;
+}
+
+.pagination-link:hover {
+    background: #444;
+}
+
+/* Smoky Section */
+#smokySection {
+    position: relative;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent smoky background */
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#posterOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+#posterOverlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#animeInfo {
+    display: flex;
+    align-items: flex-start;
+}
+
+#animePortrait {
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#animeDetails {
+    flex-grow: 1;
+    text-align: left; /* Align text to the left */
+}
+
+#animeDetails h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#animeDetails h2 {
+    font-size: 18px;
+    color: #bbb;
+    margin-bottom: 10px;
+}
+
+#animeDetails p {
+    margin-bottom: 10px;
+}
+
+/* Anime Details Table */
+#animeDetailsTable {
+    width: 48%; /* Adjusted width for left alignment */
+    margin-top: 20px;
+    margin-right: 4%;
+    border-collapse: collapse;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+    float: left; /* Align to the left */
+}
+
+#animeDetailsTable th, #animeDetailsTable td {
+    padding: 15px; /* Increased padding for better readability */
+    border: 1px solid #444;
+}
+
+#animeDetailsTable th {
+    background: #333;
+    text-align: left;
+    width: 30%; /* Fixed width for table headers */
+}
+
+#animeDetailsTable td {
+    width: calc(100% - 200px); /* Adjust width for table data */
+}
+
+/* Related Entries Section */
+
+/* Related Entries Table */
+#relatedEntriesTable {
+    width: 48%; /* Adjusted width for right alignment */
+    margin-top: 20px;
+    padding: 20px;
+    background: #222;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    float: right; /* Align to the right */
+}
+
+#relatedEntriesTable th, #relatedEntriesTable td {
+    padding: 15px; /* Increased padding for better readability */
+    border: 1px solid #444;
+}
+
+#relatedEntriesTable th {
+    background: #333;
+    text-align: left;
+    width: 30%; /* Fixed width for table headers */
+}
+
+#relatedEntriesTable td {
+    width: calc(100%); /* Adjust width for table data */
+}
+
+/*me*/
+#relatedEntriesTable ul {
+    padding-left: 1em;
+    margin-top: 0.3em;
+}
+
+.related-group {
+    margin-bottom: 1em;
+}
+
+.related-group h4 {
+    margin: 0 0 0.3em;
+    color: #fff; /* Adjust as needed */
+    font-weight: 600;
+}
+
+#relatedEntriesTable li {
+    list-style: disc;
+    margin-left: 1em;
+    color: #ccc;
+}
+
+#relatedEntriesTable a {
+    color: #ff4444;
+    text-decoration: none;
+}
+
+#relatedEntriesTable a:hover {
+    text-decoration: underline;
+}
+
+/*new*/
+#relatedEntries {
+    margin-top: 20px;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#relatedEntries h3 {
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+#relatedEntriesList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+}
+
+.related-entry {
+    position: relative;
+    width: 150px; /* Fixed size to match the anime item styling */
+    height: 250px; /* Fixed height */
+    border: 1px solid #444;
+    border-radius: 10px;
+    background: #222;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.related-entry:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.related-entry .poster-container {
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+    position: relative;
+}
+
+.related-entry .poster-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.related-entry .poster-container .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.related-entry:hover .poster-container .overlay {
+    opacity: 1;
+}
+
+.related-entry .title {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin: 10px 0;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.related-entry .detail-box {
+    background: #333;
+    color: #aaa;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Related Links List */
+.related-links {
+    padding-left: 1em;
+    margin-top: 0.3em;
+}
+
+.related-group {
+    margin-bottom: 1em;
+}
+
+.related-group h4 {
+    margin: 0 0 0.3em;
+    color: #fff;
+    font-weight: 600;
+}
+
+.related-links li {
+    list-style: disc;
+    margin-left: 1em;
+    color: #ccc;
+}
+
+.related-links a {
+    color: #80c0ff;
+    text-decoration: none;
+}
+
+.related-links a:hover {
+    text-decoration: underline;
+}
+
+
+/* Clearfix for floating elements */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Sub, Dub, and Raw Sections */
+#subDubRawSections {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.sectionContainer {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    background: #222;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.dropdownContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.dropdownContainer select, .dropdownContainer input {
+    margin-right: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #333;
+    color: #fff;
+}
+
+.episodeButtons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+
+.episodeButtons button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.episodeButtons button:hover {
+    background: #444;
+}
+
+/* Player Container */
+#player-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#player-container iframe {
+    width: 100%;
+    height: 80vh; /* Fullscreen height */
+    border-radius: 10px;
+}
+
+/* Episode Info Section */
+#episode-info {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Source Container */
+#source-container {
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button-container button:hover {
+    background: #444;
+}
+
+/* Highlighted Button */
+.button-container button.selected {
+    background: #ff4444 !important;
+    font-weight: bold;
+}
+
+/* Highlighted Episode Button */
+.episodeButtons button.selected {
+    background: #ff4444 !important;
+    font-weight: bold;
+}
+
+/* Slider Container */
+.slider-container {
+    position: relative;
+    max-width: 100%;
+    height: 400px; /* Decreased height */
+    overflow: hidden;
+    margin: 60px 0;
+    padding-top: 60px; /* Increase padding to prevent overlap with header */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Individual Slide */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 1s;
+    cursor: pointer; /* Add cursor pointer for hover effect */
+    image-rendering: auto;
+
+}
+
+/* Dark Overlay */
+.dark-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dark overlay */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align content to the left */
+    padding-left: 20px; /* Add padding for the left-aligned content */
+}
+
+/* Slide Content */
+.slide-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.slide-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.slide-content p {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* Slider Navigation */
+.slider-navigation {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-nav-button {
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.slider-nav-button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Slider Dots */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+}
+
+.slider-dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.slider-dot.active {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+/* Anime Tabs Container */
+.anime-tabs-container {
+    margin-top: 20px;
+    background: #222;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.tab-headings {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Add gap between buttons */
+}
+
+.tab-button {
+    background: #333;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+.tab-button.active {
+    background: #ff4444;
+    font-weight: bold;
+}
+
+.tab-button:hover {
+    background: #444;
+}
+
+.pagination {
+    margin-left: auto; /* Move pagination to the right */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pagination-button {
+    background: #333;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.pagination-button:hover {
+    background: #444;
+}
+
+.pagination-current {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.anime-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px; /* Add some space above the anime list */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+/* Enhanced Media Queries for Better Mobile Support */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .search-container {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #logo {
+        height: 30px;
+    }
+
+    main {
+        margin-top: 120px;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .anime-item {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .poster-container {
+        height: 180px;
+    }
+
+    #animePortrait {
+        width: 120px;
+        height: 180px;
+        margin-bottom: 10px;
+    }
+
+    #animeInfo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #animeDetails {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    #animeDetailsTable, #relatedEntriesTable {
+        float: none;
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .clearfix::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    #relatedEntriesList {
+        justify-content: center;
+    }
+
+    .related-entry {
+        width: 45%;
+        height: auto;
+    }
+
+    .related-entry .poster-container {
+        height: 180px;
+    }
+
+    #subDubRawSections {
+        flex-direction: column;
+    }
+
+    .sectionContainer {
+        margin: 10px 0;
+    }
+
+    .episodeButtons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    #player-container iframe {
+        height: 50vh;
+    }
+
+    .slider-container {
+        height: 500px;
+        margin-top: 140px;
+    }
+
+    .slide-content {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .slide-content h2 {
+        font-size: 18px;
+    }
+
+    .slide-content p {
+        font-size: 12px;
+    }
+
+    .anime-tabs-container {
+        padding: 10px;
+    }
+
+    .tab-headings {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tab-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+        gap: 5px;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .anime-list {
+        justify-content: center;
+    }
+
+    .pagination-button, .pagination-current {
+        font-size: 14px;
+    }
+
+    .button-container {
+        flex-wrap: wrap;
+    }
+
+    .button-container button {
+        flex: 1 1 45%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
+    .anime-item, .related-entry {
+        width: 100%;
+    }
+
+    .poster-container {
+        height: 160px;
+    }
+
+    #animePortrait {
+        width: 100px;
+        height: 150px;
+    }
+
+    .slide-content {
+        padding: 8px;
+    }
+
+    .slide-content h2 {
+        font-size: 16px;
+    }
+
+    .slide-content p {
+        font-size: 12px;
+    }
+
+    .episodeButtons {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tab-headings {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tab-button {
+        width: 100%;
+    }
+}
+
+/* You can add more media queries for extreme mobile resolutions or tablets if needed */

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no">
+    <title>AniNeek v17.27</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/8e3f3e5f4e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Include Header -->
+    <div id="header"></div>
+
+    <!-- Slider Container -->
+    <div id="sliderContainer" class="slider-container">
+        <div id="slider" class="slider"></div>
+        <div class="slider-navigation">
+            <button id="prevSlide" class="slider-nav-button">&#10094;</button>
+            <button id="nextSlide" class="slider-nav-button">&#10095;</button>
+        </div>
+        <div id="sliderDots" class="slider-dots"></div>
+    </div>
+
+    <!-- Box Container with Tab Headings and Anime List -->
+    <div id="animeTabsContainer" class="anime-tabs-container">
+        <div class="tab-headings">
+            <button class="tab-button active" data-tab="newest">Newest</button>
+            <button class="tab-button" data-tab="popular">Popular</button>
+            <button class="tab-button" data-tab="top-rated">Top Rated</button>
+            <div class="pagination">
+                <button id="prevPage" class="pagination-button"> &lt; </button>
+                <span id="currentPage" class="pagination-current">1</span>
+                <button id="nextPage" class="pagination-button"> &gt; </button>
+            </div>
+        </div>
+        <div id="animeList" class="anime-list"></div>
+    </div>
+
+    <script>
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("header").innerHTML = data;
+                // Initialize search and random functionality after loading the header
+                initializeSearchAndRandom();
+            });
+    </script>
+
+    <script src="index.js"></script>
+    <script src="slider.js"></script>
+    <script src="tabs.js"></script>
+    <script src="anilist-image-replacer.js"></script>
+
+</body>
+</html>
