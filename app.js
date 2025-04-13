@@ -5,7 +5,7 @@ const heroContent = document.getElementById('heroContent');
 
 // Load featured anime into hero
 function loadHeroSlider() {
-  const query = `
+  const query = 
     query {
       Page(perPage: 5) {
         media(type: ANIME, sort: TRENDING_DESC) {
@@ -18,7 +18,7 @@ function loadHeroSlider() {
         }
       }
     }
-  `;
+  ;
 
   fetch(API_URL, {
     method: 'POST',
@@ -36,36 +36,26 @@ function loadHeroSlider() {
         const title = anime.title.romaji || 'Untitled';
         const description = anime.description || 'No description.';
 
-        return `
-  <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-30' : 'opacity-0 z-10'}">
-    <!-- Background Image -->
-    <img src="${bgImage}" alt="${title}" class="w-full h-full object-cover object-center absolute inset-0 pointer-events-none" />
+        return 
+          <div class="slide absolute inset-0 transition-opacity duration-1000 ease-in-out ${index === 0 ? 'opacity-100 z-30' : 'opacity-0 z-10'}">
+            <img src="${bgImage}" alt="${title}" class="w-full h-full object-cover object-center absolute inset-0" />
+    
+            <!-- Full dark gradient overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent backdrop-blur-sm">
 
-    <!-- Overlay -->
-    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent backdrop-blur-sm z-20">
-
-      <!-- Content Bottom Left -->
-      <div class="absolute bottom-0 left-0 w-full p-6 md:p-12 z-30">
-        <div class="p-4 md:p-6 max-h-[60vh] text-white">
-          <h1 class="text-2xl md:text-4xl font-bold mb-3">${title}</h1>
-          <p class="text-sm mb-2 italic">${genres}</p>
-          <div class="text-sm max-h-[140px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
-            ${description}
+              <!-- Content at bottom -->
+              <div class="absolute bottom-0 left-0 w-full p-6 md:p-12">
+                <div class="p-4 md:p-6 max-h-[60vh] text-white">
+                  <h1 class="text-2xl md:text-4xl font-bold mb-3">${title}</h1>
+                  <p class="text-sm mb-2 italic">${genres}</p>
+                  <div class="text-sm max-h-[140px] overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-white/30 scrollbar-track-transparent">
+                    ${description}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-
-      <!-- Watch Now Button Bottom Right (slightly moved up) -->
-      <div class="absolute bottom-20 right-8 z-30">
-        <a href="anime.html?id=${anime.id}" 
-           class="bg-[#ff4444] text-white px-5 py-2 rounded shadow hover:bg-red-600 transition">
-          Watch Now
-        </a>
-      </div>
-    </div>
-  </div>
-`;
-
+        ;
 
       }).join('');
 
@@ -92,7 +82,7 @@ function startSlider() {
 function loadAnime(type = 'TRENDING') {
   animeSection.innerHTML = '<p class="col-span-full text-center text-gray-400">Loading...</p>';
 
-  const query = `
+  const query = 
     query ($type: MediaType, $sort: [MediaSort]) {
       Page(perPage: 30) {
         media(type: $type, sort: $sort) {
@@ -102,7 +92,7 @@ function loadAnime(type = 'TRENDING') {
         }
       }
     }
-  `;
+  ;
 
   const variables = {
     type: 'ANIME',
@@ -121,12 +111,12 @@ function loadAnime(type = 'TRENDING') {
       animeSection.innerHTML = data.data.Page.media.map(anime => {
         const title = anime.title?.romaji || 'Untitled';
         const image = anime.coverImage?.extraLarge || 'assets/fallback.jpg';
-        return `
+        return 
           <a href="anime.html?id=${anime.id}" class="bg-gray-100 dark:bg-[#222] rounded shadow hover:scale-105 transition overflow-hidden" data-aos="fade-up">
             <img src="${image}" alt="${title}" class="w-full h-[240px] object-cover rounded-t" />
             <div class="p-2 text-sm text-center font-semibold">${title}</div>
           </a>
-        `;
+        ;
       }).join('');
     });
 }
@@ -181,7 +171,7 @@ function setupSearchHandler() {
   if (searchBox) {
     searchBox.addEventListener('keypress', (e) => {
       if (e.key === 'Enter') {
-        window.location.href = `search.html?q=${searchBox.value}`;
+        window.location.href = search.html?q=${searchBox.value};
       }
     });
   }
