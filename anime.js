@@ -58,7 +58,8 @@ async function fetchAnimeDetails(id) {
     document.getElementById('animeDetails').innerHTML = `
       <img src="${anime.coverImage.extraLarge}" alt="${anime.title.romaji}" class="rounded shadow max-w-full">
       <div class="md:col-span-2">
-        <h1 class="text-3xl font-bold mb-2">${anime.title.english || anime.title.romaji}</h1>
+        <h1 class="text-3xl font-bold mb-1">${anime.title.romaji}</h1>
+        <p class="italic text-lg text-gray-600 mb-4">${anime.title.english || ''}</p>
         <p class="text-sm mb-4">${anime.description || 'No description available.'}</p>
         <p><strong>Genres:</strong> ${anime.genres.join(', ')}</p>
         <p><strong>Format:</strong> ${anime.format}</p>
