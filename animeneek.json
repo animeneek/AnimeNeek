@@ -97547,67 +97547,37 @@
       },
       {
         "data-ep-lan": "Sub",
-        "data-ep-num": "2 (Mirror 1)",
-        "data-src": "URL",
-        "data-video-id": "the-unaware-atelier-master-episode-2"
-      },
-      {
-        "data-ep-lan": "Sub",
-        "data-ep-num": "3 (Mirror 1)",
-        "data-src": "URL",
-        "data-video-id": "the-unaware-atelier-master-episode-3"
-      },
-      {
-        "data-ep-lan": "Sub",
-        "data-ep-num": "4 (Mirror 1)",
-        "data-src": "URL",
-        "data-video-id": "the-unaware-atelier-master-episode-4"
-      },
-      {
-        "data-ep-lan": "Sub",
-        "data-ep-num": "5 (Mirror 1)",
-        "data-src": "URL",
-        "data-video-id": "the-unaware-atelier-master-episode-5"
-      },
-      {
-        "data-ep-lan": "Sub",
-        "data-ep-num": "6 (Mirror 1)",
-        "data-src": "URL",
-        "data-video-id": "the-unaware-atelier-master-episode-6"
-      },
-      {
-        "data-ep-lan": "Sub",
         "data-ep-num": "1 (Mirror 2)",
         "data-src": "anime",
         "data-video-id": "31505"
       },
       {
         "data-ep-lan": "Sub",
-        "data-ep-num": "2 (Mirror 2)",
+        "data-ep-num": 2,
         "data-src": "anime",
         "data-video-id": "31513"
       },
       {
         "data-ep-lan": "Sub",
-        "data-ep-num": "3 (Mirror 2)",
-        "data-src": "URL",
-        "data-video-id": "the-unaware-atelier-meister-episode-3"
+        "data-ep-num": 3,
+        "data-src": "anime",
+        "data-video-id": "31741"
       },
       {
         "data-ep-lan": "Sub",
-        "data-ep-num": "4 (Mirror 2)",
+        "data-ep-num": 4,
         "data-src": "URL",
         "data-video-id": "the-unaware-atelier-meister-episode-4"
       },
       {
         "data-ep-lan": "Sub",
-        "data-ep-num": "5 (Mirror 2)",
+        "data-ep-num": 5,
         "data-src": "URL",
         "data-video-id": "the-unaware-atelier-meister-episode-5"
       },
       {
         "data-ep-lan": "Sub",
-        "data-ep-num": "6 (Mirror 2)",
+        "data-ep-num": 6,
         "data-src": "URL",
         "data-video-id": "the-unaware-atelier-meister-episode-6"
       }
@@ -99426,8 +99396,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "the-gorilla-gods-go-to-girl-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31744"
       },
       {
         "data-ep-lan": "Sub",
