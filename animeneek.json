@@ -48504,8 +48504,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 108,
-        "data-src": "URL",
-        "data-video-id": "keyboard-immortal-episode-108"
+        "data-src": "anime",
+        "data-video-id": "31767"
       },
       {
         "data-ep-lan": "Sub",
@@ -49568,6 +49568,18 @@
         "data-ep-num": 70,
         "data-src": "anime",
         "data-video-id": "31584"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 71,
+        "data-src": "anime",
+        "data-video-id": "31765"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 72,
+        "data-src": "URL",
+        "data-video-id": "lingwu-continent-episode-72-english-subbed"
       }
     ]
   },
@@ -50354,6 +50366,18 @@
         "data-ep-num": 12,
         "data-src": "URL",
         "data-video-id": "mashin-souzouden-wataru-episode-12"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 13,
+        "data-src": "anime",
+        "data-video-id": "31769"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 14,
+        "data-src": "anime",
+        "data-video-id": "31771"
       }
     ]
   },
@@ -70588,6 +70612,12 @@
         "data-video-id": "31507"
       },
       {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1125,
+        "data-src": "anime",
+        "data-video-id": "31747"
+      },
+      {
         "data-ep-lan": "Dub",
         "data-ep-num": "1",
         "data-src": "anime",
@@ -77330,6 +77360,12 @@
         "data-ep-num": 1124,
         "data-src": "URL",
         "data-video-id": "one-piece-dub-episode-1124"
+      },
+      {
+        "data-ep-lan": "Dub",
+        "data-ep-num": 1125,
+        "data-src": "URL",
+        "data-video-id": "one-piece-dub-episode-1125"
       }
     ]
   },
@@ -80520,8 +80556,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 84,
-        "data-src": "URL",
-        "data-video-id": "renegade-immortal-episode-84"
+        "data-src": "anime",
+        "data-video-id": "31753"
       },
       {
         "data-ep-lan": "Sub",
@@ -86322,8 +86358,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 26,
-        "data-src": "URL",
-        "data-video-id": "tales-of-herding-gods-episode-26"
+        "data-src": "anime",
+        "data-video-id": "31763"
       }
     ]
   },
@@ -89322,14 +89358,14 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 11,
-        "data-src": "URL",
-        "data-video-id": "the-laid-off-demon-king-episode-11"
+        "data-src": "anime",
+        "data-video-id": "31759"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
-        "data-src": "URL",
-        "data-video-id": "the-laid-off-demon-king-episode-12"
+        "data-src": "anime",
+        "data-video-id": "31761"
       },
       {
         "data-ep-lan": "Sub",
@@ -91958,6 +91994,42 @@
         "data-ep-num": 64,
         "data-src": "anime",
         "data-video-id": "31277"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 65,
+        "data-src": "anime",
+        "data-video-id": "31857"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 66,
+        "data-src": "anime",
+        "data-video-id": "31864"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 67,
+        "data-src": "anime",
+        "data-video-id": "31866"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 68,
+        "data-src": "anime",
+        "data-video-id": "31868"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 69,
+        "data-src": "anime",
+        "data-video-id": "31870"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 70,
+        "data-src": "anime",
+        "data-video-id": "31871"
       }
     ]
   },
@@ -94052,6 +94124,42 @@
         "data-ep-num": 2,
         "data-src": "anime",
         "data-video-id": "31182"
+      },
+      {
+        "data-ep-lan": null,
+        "data-ep-num": null,
+        "data-src": null,
+        "data-video-id": "nan"
+      },
+      {
+        "data-ep-lan": null,
+        "data-ep-num": null,
+        "data-src": null,
+        "data-video-id": "nan"
+      },
+      {
+        "data-ep-lan": null,
+        "data-ep-num": null,
+        "data-src": null,
+        "data-video-id": "nan"
+      },
+      {
+        "data-ep-lan": null,
+        "data-ep-num": null,
+        "data-src": null,
+        "data-video-id": "nan"
+      },
+      {
+        "data-ep-lan": null,
+        "data-ep-num": null,
+        "data-src": null,
+        "data-video-id": "nan"
+      },
+      {
+        "data-ep-lan": null,
+        "data-ep-num": null,
+        "data-src": null,
+        "data-video-id": "nan"
       },
       {
         "data-ep-lan": null,
@@ -97602,8 +97710,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "the-beginning-after-the-end-episode-3"
+        "data-src": "anime",
+        "data-video-id": "31830"
       },
       {
         "data-ep-lan": "Sub",
@@ -97680,8 +97788,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "catch-me-at-the-ballpark-episode-3"
+        "data-src": "anime",
+        "data-video-id": "31812"
       },
       {
         "data-ep-lan": "Sub",
@@ -97758,62 +97866,62 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-3"
+        "data-src": "anime",
+        "data-video-id": "31808"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 4,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-4"
+        "data-video-id": "once-upon-a-witchs-death-episode-4"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 5,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-5"
+        "data-video-id": "once-upon-a-witchs-death-episode-5"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 6,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-6"
+        "data-video-id": "once-upon-a-witchs-death-episode-6"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 7,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-7"
+        "data-video-id": "once-upon-a-witchs-death-episode-7"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 8,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-8"
+        "data-video-id": "once-upon-a-witchs-death-episode-8"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 9,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-9"
+        "data-video-id": "once-upon-a-witchs-death-episode-9"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 10,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-10"
+        "data-video-id": "once-upon-a-witchs-death-episode-10"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 11,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-11"
+        "data-video-id": "once-upon-a-witchs-death-episode-11"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 12,
         "data-src": "URL",
-        "data-video-id": "until-the-witch-dies-episode-12"
+        "data-video-id": "once-upon-a-witchs-death-episode-12"
       }
     ]
   },
@@ -97836,8 +97944,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "the-brilliant-healers-new-life-in-the-shadows-episode-3"
+        "data-src": "anime",
+        "data-video-id": "31882"
       },
       {
         "data-ep-lan": "Sub",
@@ -97914,8 +98022,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "your-forma-episode-3-english-sub"
+        "data-src": "anime",
+        "data-video-id": "31822"
       },
       {
         "data-ep-lan": "Sub",
@@ -97956,8 +98064,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "the-too-perfect-saint-tossed-aside-by-my-fiance-and-sold-to-another-kingdom-episode-3"
+        "data-src": "anime",
+        "data-video-id": "31824"
       },
       {
         "data-ep-lan": "Sub",
@@ -99354,8 +99462,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "yandere-dark-elf-she-chased-me-all-the-way-from-another-world-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31749"
       },
       {
         "data-ep-lan": "Sub",
@@ -99474,8 +99582,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "the-shiunji-family-children-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31806"
       },
       {
         "data-ep-lan": "Sub",
@@ -99552,8 +99660,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "princession-orchestra-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31826"
       },
       {
         "data-ep-lan": "Sub",
@@ -99594,8 +99702,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "himitsu-no-aipri-2nd-season-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31791"
       },
       {
         "data-ep-lan": "Sub",
@@ -99636,8 +99744,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "the-mononoke-lecture-logs-of-chuzenji-sensei-he-just-solves-all-the-mysteries-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31789"
       },
       {
         "data-ep-lan": "Sub",
@@ -99714,8 +99822,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "compass2-0-animation-project-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31787"
       },
       {
         "data-ep-lan": "Sub",
@@ -99798,8 +99906,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "sword-of-the-demon-hunter-kijin-gentosho-episode-3"
+        "data-src": "anime",
+        "data-video-id": "31782"
       },
       {
         "data-ep-lan": "Sub",
@@ -99834,8 +99942,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "summer-pockets-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31784"
       },
       {
         "data-ep-lan": "Sub",
@@ -99876,8 +99984,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "my-hero-academia-vigilantes-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31779"
       },
       {
         "data-ep-lan": "Sub",
@@ -99960,8 +100068,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "zatsu-tabi-thats-journey-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31777"
       },
       {
         "data-ep-lan": "Sub",
@@ -100100,6 +100208,78 @@
         "data-ep-num": 12,
         "data-src": "URL",
         "data-video-id": "aharen-san-wa-hakarenai-season-2-episode-12"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "1 (Mirror 2)",
+        "data-src": "anime",
+        "data-video-id": "31773"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": "2 (Mirror 2)",
+        "data-src": "anime",
+        "data-video-id": "31775"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "aharen-is-indecipherable-2nd-season-episode-12"
       }
     ]
   },
@@ -100230,8 +100410,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "kakushite-makina-san-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31751"
       },
       {
         "data-ep-lan": "Sub",
@@ -100272,8 +100452,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "uchuujin-muumuu-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31827"
       },
       {
         "data-ep-lan": "Sub",
@@ -100314,8 +100494,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "apocalypse-hotel-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31814"
       },
       {
         "data-ep-lan": "Sub",
@@ -100512,8 +100692,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 2,
-        "data-src": "URL",
-        "data-video-id": "a-ninja-and-an-assassin-under-one-roof-episode-2"
+        "data-src": "anime",
+        "data-video-id": "31880"
       },
       {
         "data-ep-lan": "Sub",
@@ -101438,6 +101618,468 @@
         "data-ep-num": 26,
         "data-src": "URL",
         "data-video-id": "witch-watch-episode-26"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59189,
+    "data-mal-title": "Sentai Daishikkaku 2nd Season (Go! Go! Loser Ranger! Season 2)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31755"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "go-go-loser-ranger-season-2-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60535,
+    "data-mal-title": "Everyday Host",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "URL",
+        "data-video-id": "everyday-host-episode-1"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31757"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "everyday-host-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "everyday-host-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "everyday-host-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "everyday-host-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60828,
+    "data-mal-title": "Hua Jianghu: Bu Liang Ren Qi - Jiu Youxuan Tian",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31795"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31797"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "anime",
+        "data-video-id": "31799"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "anime",
+        "data-video-id": "31804"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "hua-jianghu-bu-liang-ren-qi-jiu-youxuan-tian-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "hua-jianghu-bu-liang-ren-qi-jiu-youxuan-tian-episode-6"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "URL",
+        "data-video-id": "hua-jianghu-bu-liang-ren-qi-jiu-youxuan-tian-episode-7"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "URL",
+        "data-video-id": "hua-jianghu-bu-liang-ren-qi-jiu-youxuan-tian-episode-8"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "URL",
+        "data-video-id": "hua-jianghu-bu-liang-ren-qi-jiu-youxuan-tian-episode-9"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "URL",
+        "data-video-id": "hua-jianghu-bu-liang-ren-qi-jiu-youxuan-tian-episode-10"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "URL",
+        "data-video-id": "hua-jianghu-bu-liang-ren-qi-jiu-youxuan-tian-episode-11"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "URL",
+        "data-video-id": "hua-jianghu-bu-liang-ren-qi-jiu-youxuan-tian-episode-12"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60506,
+    "data-mal-title": "Araiguma Calcal-dan",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31793"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31816"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "araiguma-calcal-dan-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "araiguma-calcal-dan-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "araiguma-calcal-dan-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "araiguma-calcal-dan-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 58222,
+    "data-mal-title": "Given Movie 3: Umi e",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31818"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 60449,
+    "data-mal-title": "Kidou Senshi Gundam: GQuuuuuuX (Mobile Suit Gundam: GQuuuuuuX)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "URL",
+        "data-video-id": "mobile-suit-gundam-gquuuuuux-episode-1"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31810"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "mobile-suit-gundam-gquuuuuux-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "mobile-suit-gundam-gquuuuuux-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "mobile-suit-gundam-gquuuuuux-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "mobile-suit-gundam-gquuuuuux-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 56773,
+    "data-mal-title": "Wan Jie Zhizun 2nd Season",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 159,
+        "data-src": "anime",
+        "data-video-id": "31836"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 160,
+        "data-src": "URL",
+        "data-video-id": "the-emperor-of-myriad-realms-2nd-season-episode-160"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 53223,
+    "data-mal-title": "Kingdom 5th Season (Kingdom: Season 5)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31832"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "anime",
+        "data-video-id": "31834"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "anime",
+        "data-video-id": "31838"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "anime",
+        "data-video-id": "31840"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "anime",
+        "data-video-id": "31843"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "anime",
+        "data-video-id": "31845"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 7,
+        "data-src": "anime",
+        "data-video-id": "31847"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 8,
+        "data-src": "anime",
+        "data-video-id": "31849"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 9,
+        "data-src": "anime",
+        "data-video-id": "31851"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 10,
+        "data-src": "anime",
+        "data-video-id": "31853"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 11,
+        "data-src": "anime",
+        "data-video-id": "31855"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 12,
+        "data-src": "anime",
+        "data-video-id": "31858"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 13,
+        "data-src": "anime",
+        "data-video-id": "31860"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 59369,
+    "data-mal-title": "Lycoris Recoil: Friends Are Thieves of Time.",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31820"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 2,
+        "data-src": "URL",
+        "data-video-id": "lycoris-recoil-short-movie-episode-2"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 3,
+        "data-src": "URL",
+        "data-video-id": "lycoris-recoil-short-movie-episode-3"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 4,
+        "data-src": "URL",
+        "data-video-id": "lycoris-recoil-short-movie-episode-4"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 5,
+        "data-src": "URL",
+        "data-video-id": "lycoris-recoil-short-movie-episode-5"
+      },
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 6,
+        "data-src": "URL",
+        "data-video-id": "lycoris-recoil-short-movie-episode-6"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 52107,
+    "data-mal-title": "Mononoke Movie: Karakasa (Mononoke the Movie: Phantom in the Rain)",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31878"
+      }
+    ]
+  },
+  {
+    "data-mal-id": 54791,
+    "data-mal-title": "Given Movie 2: Hiiragi Mix (given The Movie: Hiiragi Mix) - \nMyAnimeList.net",
+    "episodes": [
+      {
+        "data-ep-lan": "Sub",
+        "data-ep-num": 1,
+        "data-src": "anime",
+        "data-video-id": "31875"
       }
     ]
   }
