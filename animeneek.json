@@ -51246,26 +51246,26 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "rock-is-a-ladys-modesty-episode-3-english-subbed"
+        "data-src": "anime",
+        "data-video-id": "31884"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 4,
         "data-src": "URL",
-        "data-video-id": "rock-is-a-ladys-modesty-episode-4-english-subbed"
+        "data-video-id": "rock-is-a-ladys-modesty-episode-4"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 5,
         "data-src": "URL",
-        "data-video-id": "rock-is-a-ladys-modesty-episode-5-english-subbed"
+        "data-video-id": "rock-is-a-ladys-modesty-episode-5"
       },
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 6,
         "data-src": "URL",
-        "data-video-id": "rock-is-a-ladys-modesty-episode-6-english-subbed"
+        "data-video-id": "rock-is-a-ladys-modesty-episode-6"
       }
     ]
   },
@@ -94170,42 +94170,6 @@
       {
         "data-ep-lan": null,
         "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
-        "data-src": null,
-        "data-video-id": "nan"
-      },
-      {
-        "data-ep-lan": null,
-        "data-ep-num": null,
         "data-src": "URL",
         "data-video-id": "#VALUE!"
       }
@@ -97735,7 +97699,7 @@
   },
   {
     "data-mal-id": 61293,
-    "data-mal-title": "Koisuru One Piece",
+    "data-mal-title": "Loading...",
     "episodes": [
       {
         "data-ep-lan": "Sub",
@@ -100542,8 +100506,8 @@
       {
         "data-ep-lan": "Sub",
         "data-ep-num": 3,
-        "data-src": "URL",
-        "data-video-id": "wind-breaker-season-2-episode-3"
+        "data-src": "anime",
+        "data-video-id": "31886"
       },
       {
         "data-ep-lan": "Sub",
@@ -102073,7 +102037,7 @@
   },
   {
     "data-mal-id": 54791,
-    "data-mal-title": "Given Movie 2: Hiiragi Mix (given The Movie: Hiiragi Mix) - \nMyAnimeList.net",
+    "data-mal-title": "Given Movie 2: Hiiragi Mix (given The Movie: Hiiragi Mix)",
     "episodes": [
       {
         "data-ep-lan": "Sub",
