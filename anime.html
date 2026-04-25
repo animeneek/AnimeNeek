@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>AnimeNeek | Anime Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background: #050505;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            min-height: 100vh;
+        }
+        
+        /* Background with blur effect matching homepage */
+        .bg-blur {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 20% 30%, rgba(255, 68, 68, 0.08) 0%, #050505 100%);
+            z-index: -1;
+        }
+        
+        /* Glassmorphic cards */
+        .glass-card {
+            background: rgba(10, 10, 10, 0.6);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 1.5rem;
+        }
+        
+        /* Accent color */
+        .accent-red {
+            color: #ff4444;
+        }
+        
+        .accent-border {
+            border-color: #ff4444;
+        }
+        
+        /* Episode button */
+        .ep-btn {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+        
+        .ep-btn:hover {
+            background: rgba(255, 68, 68, 0.2);
+            border-color: rgba(255, 68, 68, 0.4);
+        }
+        
+        .ep-btn.active {
+            background: #ff4444;
+            border-color: #ff4444;
+            color: white;
+            box-shadow: 0 0 12px rgba(255, 68, 68, 0.4);
+        }
+        
+        /* Source button */
+        .source-btn {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            padding: 0.6rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        
+        .source-btn:hover {
+            background: rgba(255, 68, 68, 0.2);
+            border-color: rgba(255, 68, 68, 0.4);
+        }
+        
+        .source-btn.active {
+            background: #ff4444;
+            border-color: #ff4444;
+            color: white;
+        }
+        
+        /* Dropdown */
+        select {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            color: white;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+        
+        select:focus {
+            outline: none;
+            border-color: #ff4444;
+        }
+        
+        /* Player iframe */
+        .player-iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 1rem;
+        }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 4px;
+            height: 4px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: #ff4444;
+            border-radius: 4px;
+        }
+        
+        /* No scrollbar for episodes */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        /* Synopsis clamp */
+        .synopsis-clamp {
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        /* Mobile adjustments */
+        @media (max-width: 768px) {
+            .glass-card {
+                border-radius: 1rem;
+            }
+            
+            .ep-btn {
+                padding: 0.4rem 0.6rem;
+                font-size: 0.7rem;
+            }
+            
+            .source-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-blur"></div>
+
+    <!-- Back button -->
+    <div class="fixed top-4 left-4 z-50">
+        <a href="index.html" class="glass-card inline-flex items-center gap-2 px-4 py-2 rounded-full text-white/80 hover:text-white transition">
+            <i class="fas fa-arrow-left"></i>
+            <span class="hidden sm:inline">Back to Home</span>
+        </a>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 pt-20 pb-24">
+        
+        <!-- Anime Info Section -->
+        <div id="info" class="glass-card p-6 md:p-8 mb-8"></div>
+        
+        <!-- Watch Section -->
+        <div class="glass-card p-6 md:p-8 mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-5 flex items-center gap-2">
+                <i class="fas fa-play-circle accent-red"></i> Watch Now
+            </h2>
+            
+            <!-- Player -->
+            <div id="player" class="w-full aspect-video bg-black/50 rounded-xl overflow-hidden flex items-center justify-center text-center text-gray-400 mb-6">
+                <div id="player-placeholder" class="px-6">
+                    <i class="fas fa-film text-4xl mb-2 opacity-50"></i>
+                    <p class="text-sm">Select an episode to start watching</p>
+                </div>
+            </div>
+            
+            <!-- Episodes Header -->
+            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 mb-4">
+                <h3 class="text-lg font-bold flex items-center gap-2">
+                    <i class="fas fa-list-ol accent-red"></i> Episodes
+                </h3>
+                <select id="episodeDropdown" class="rounded-full px-4 py-2 text-sm">
+                    <option value="">Select episode</option>
+                </select>
+            </div>
+            
+            <!-- Episodes Grid -->
+            <div id="episodes" class="flex gap-2 overflow-x-auto no-scrollbar pb-4 mb-6"></div>
+            
+            <!-- Sources -->
+            <h3 class="text-lg font-bold mb-3 flex items-center gap-2">
+                <i class="fas fa-database accent-red"></i> Source
+            </h3>
+            <div id="sources" class="flex gap-3 flex-wrap"></div>
+        </div>
+        
+        <!-- Characters Section -->
+        <div class="glass-card p-6 md:p-8 mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-5 flex items-center gap-2">
+                <i class="fas fa-users accent-red"></i> Characters & Voice Actors
+            </h2>
+            <div id="characters-grid" class="grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3"></div>
+        </div>
+        
+        <!-- Staff Section -->
+        <div class="glass-card p-6 md:p-8 mb-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-5 flex items-center gap-2">
+                <i class="fas fa-user-tie accent-red"></i> Staff
+            </h2>
+            <div id="staff-grid" class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4"></div>
+        </div>
+        
+        <!-- Recommendations Section -->
+        <div class="glass-card p-6 md:p-8">
+            <h2 class="text-xl md:text-2xl font-bold mb-5 flex items-center gap-2">
+                <i class="fas fa-clone accent-red"></i> Recommended For You
+            </h2>
+            <div id="recommendations-grid" class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4"></div>
+        </div>
+    </main>
+
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        
+        if (!id) {
+            window.location.href = "index.html";
+        }
+        
+        const ANILIST_API = "https://graphql.anilist.co";
+        const FALLBACK_IMG = "https://via.placeholder.com/300x450/1a1a1a/ff4444?text=No+Image";
+        
+        let currentEpisode = null;
+        let malId = null;
+        let totalEpisodes = 0;
+        let mediaStatus = null;
+        let nextAiringEpisode = null;
+        let mediaEpisodes = null;
+        
+        // JSON data storage for episodes
+        let jsonData = null;
+        let isJsonAnime = false;
+        let jsonEpisodeMap = new Map();
+        
+        // Fetch JSON data
+        async function fetchJsonData() {
+            try {
+                const response = await fetch('https://raw.githubusercontent.com/18otaku/streamtape-json/main/ha.json');
+                const data = await response.json();
+                jsonData = data;
+            } catch (error) {
+                console.error('Failed to load JSON data:', error);
+                jsonData = null;
+            }
+        }
+        
+        // Check if current anime exists in JSON
+        function checkJsonAnime() {
+            if (!jsonData || !jsonData.files) {
+                isJsonAnime = false;
+                return;
+            }
+            
+            jsonEpisodeMap.clear();
+            
+            const animeFiles = jsonData.files.filter(file => {
+                return (file.mal_id == malId) || (file.anilist_id == id);
+            });
+            
+            if (animeFiles.length === 0) {
+                isJsonAnime = false;
+                return;
+            }
+            
+            isJsonAnime = true;
+            
+            animeFiles.forEach(file => {
+                const title = file.title;
+                const episodeMatch = title.match(/\[.*?-(\d+)\]/);
+                if (episodeMatch) {
+                    const episodeNum = parseInt(episodeMatch[1]);
+                    const isUncensored = title.includes('[Uncen]');
+                    
+                    if (!jsonEpisodeMap.has(episodeNum)) {
+                        jsonEpisodeMap.set(episodeNum, []);
+                    }
+                    jsonEpisodeMap.get(episodeNum).push({
+                        vidcode: file.vidcode,
+                        isUncensored: isUncensored
+                    });
+                }
+            });
+        }
+        
+        const QUERY = `
+        query($id: Int) {
+            Media(id: $id, type: ANIME) {
+                id
+                idMal
+                title { romaji english native }
+                description(asHtml: false)
+                coverImage { extraLarge large }
+                bannerImage
+                startDate { year }
+                episodes
+                averageScore
+                genres
+                status
+                nextAiringEpisode {
+                    episode
+                    timeUntilAiring
+                }
+                characters(sort: ROLE, perPage: 12) {
+                    edges {
+                        role
+                        node { id name { full } image { large } }
+                        voiceActors(sort: RELEVANCE) {
+                            id
+                            languageV2
+                            name { full }
+                            image { large }
+                        }
+                    }
+                }
+                staff(perPage: 12) {
+                    edges {
+                        role
+                        node { id name { full } image { large } }
+                    }
+                }
+                recommendations(perPage: 10) {
+                    edges {
+                        node {
+                            mediaRecommendation {
+                                id
+                                title { romaji english }
+                                coverImage { large }
+                                averageScore
+                                status
+                                episodes
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        `;
+        
+        async function fetchAnime() {
+            await fetchJsonData();
+            const response = await fetch(ANILIST_API, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ query: QUERY, variables: { id: Number(id) } })
+            });
+            const json = await response.json();
+            malId = json.data.Media.idMal;
+            checkJsonAnime();
+            renderAnime(json.data.Media);
+        }
+        
+        function safeImg(src) {
+            if (!src) return FALLBACK_IMG;
+            const invalidPatterns = ['default.jpg', 'placeholder', 'no-image', 'missing'];
+            const lowerSrc = src.toLowerCase();
+            if (invalidPatterns.some(pattern => lowerSrc.includes(pattern))) {
+                return FALLBACK_IMG;
+            }
+            return src;
+        }
+        
+        function stripHtml(html) {
+            if (!html) return "No description available.";
+            const temp = document.createElement('div');
+            temp.innerHTML = html;
+            return temp.textContent || temp.innerText || "";
+        }
+        
+        // Render episodes grid
+        function renderEpisodes() {
+            const epContainer = document.getElementById("episodes");
+            const epDropdown = document.getElementById("episodeDropdown");
+            
+            epContainer.innerHTML = "";
+            epDropdown.innerHTML = `<option value="">Select episode</option>`;
+            
+            if (isJsonAnime) {
+                const maxEpisode = Math.max(...Array.from(jsonEpisodeMap.keys()));
+                totalEpisodes = maxEpisode;
+            } else {
+                if (mediaStatus === "NOT_YET_RELEASED") {
+                    totalEpisodes = 0;
+                } else if (mediaStatus === "RELEASING") {
+                    totalEpisodes = (nextAiringEpisode?.episode || 1) - 1;
+                } else {
+                    totalEpisodes = mediaEpisodes || 0;
+                }
+            }
+            
+            if (totalEpisodes <= 0) {
+                epContainer.innerHTML = '<p class="text-gray-400 text-sm">No episodes available yet.</p>';
+                return;
+            }
+            
+            // Populate dropdown
+            for (let i = 1; i <= Math.min(totalEpisodes, 200); i++) {
+                const opt = document.createElement("option");
+                opt.value = i;
+                opt.textContent = `Episode ${i}`;
+                epDropdown.appendChild(opt);
+            }
+            
+            epDropdown.onchange = (e) => {
+                if (e.target.value) selectEpisode(Number(e.target.value));
+            };
+            
+            // Grid for episodes
+            epContainer.className = "grid grid-cols-5 sm:grid-cols-8 md:grid-cols-12 lg:grid-cols-15 gap-2";
+            
+            const maxShow = Math.min(totalEpisodes, 50);
+            for (let i = 1; i <= maxShow; i++) {
+                const btn = document.createElement("button");
+                btn.className = "ep-btn";
+                btn.textContent = i;
+                btn.onclick = () => selectEpisode(i);
+                if (currentEpisode === i) btn.classList.add("active");
+                epContainer.appendChild(btn);
+            }
+            
+            if (totalEpisodes > 50) {
+                const moreHint = document.createElement("div");
+                moreHint.className = "ep-btn opacity-50 cursor-default";
+                moreHint.textContent = `+${totalEpisodes - 50} more`;
+                epContainer.appendChild(moreHint);
+            }
+        }
+        
+        function selectEpisode(ep) {
+            currentEpisode = Number(ep);
+            
+            document.querySelectorAll(".ep-btn").forEach(btn => {
+                const btnNum = parseInt(btn.textContent);
+                if (!isNaN(btnNum) && btnNum === currentEpisode) {
+                    btn.classList.add("active");
+                } else if (!isNaN(btnNum)) {
+                    btn.classList.remove("active");
+                }
+            });
+            
+            document.getElementById("episodeDropdown").value = currentEpisode;
+            renderSources();
+        }
+        
+        function renderSources() {
+            const srcContainer = document.getElementById("sources");
+            srcContainer.innerHTML = "";
+            
+            if (isJsonAnime && jsonEpisodeMap.has(currentEpisode)) {
+                const sources = jsonEpisodeMap.get(currentEpisode);
+                sources.forEach(source => {
+                    const btn = document.createElement("button");
+                    btn.className = "source-btn";
+                    const label = source.isUncensored ? "Uncensored" : "Censored";
+                    btn.textContent = label;
+                    
+                    btn.onclick = () => {
+                        document.querySelectorAll(".source-btn").forEach(b => b.classList.remove("active"));
+                        btn.classList.add("active");
+                        
+                        const embedUrl = `https://streamtape.com/e/${source.vidcode}`;
+                        document.getElementById("player").innerHTML = `
+                            <iframe src="${embedUrl}" allowfullscreen class="player-iframe"></iframe>
+                        `;
+                    };
+                    
+                    srcContainer.appendChild(btn);
+                });
+            } else if (malId && currentEpisode) {
+                // Fallback sources
+                const sources = [
+                    { name: "SUB", url: `https://megaplay.buzz/stream/mal/${malId}/${currentEpisode}/sub` },
+                    { name: "DUB", url: `https://megaplay.buzz/stream/mal/${malId}/${currentEpisode}/dub` }
+                ];
+                
+                sources.forEach(src => {
+                    const btn = document.createElement("button");
+                    btn.className = "source-btn";
+                    btn.textContent = src.name;
+                    
+                    btn.onclick = () => {
+                        document.querySelectorAll(".source-btn").forEach(b => b.classList.remove("active"));
+                        btn.classList.add("active");
+                        
+                        document.getElementById("player").innerHTML = `
+                            <iframe src="${src.url}" allowfullscreen class="player-iframe"></iframe>
+                        `;
+                    };
+                    
+                    srcContainer.appendChild(btn);
+                });
+            }
+        }
+        
+        function renderAnime(media) {
+            malId = media.idMal;
+            mediaStatus = media.status;
+            nextAiringEpisode = media.nextAiringEpisode;
+            mediaEpisodes = media.episodes;
+            
+            const title = media.title?.english || media.title?.romaji || media.title?.native || "Unknown";
+            const description = stripHtml(media.description);
+            const score = media.averageScore ? (media.averageScore / 10).toFixed(1) : "N/A";
+            const year = media.startDate?.year || "TBA";
+            const genres = media.genres?.slice(0, 5).join(" • ") || "";
+            
+            let airingInfo = "";
+            if (media.status === "RELEASING" && media.nextAiringEpisode) {
+                const ep = media.nextAiringEpisode.episode;
+                const sec = media.nextAiringEpisode.timeUntilAiring;
+                const days = Math.floor(sec / 86400);
+                const hours = Math.floor((sec % 86400) / 3600);
+                const minutes = Math.floor((sec % 3600) / 60);
+                airingInfo = `<div class="status-pill mt-2"><i class="fas fa-clock accent-red"></i> Next Episode ${ep}: ${days}d ${hours}h ${minutes}m</div>`;
+            } else if (media.status === "FINISHED") {
+                airingInfo = `<div class="status-pill mt-2"><i class="fas fa-check-circle" style="color: #10b981;"></i> Completed • ${media.episodes || '?'} Episodes</div>`;
+            } else if (media.status === "NOT_YET_RELEASED") {
+                airingInfo = `<div class="status-pill mt-2"><i class="fas fa-clock accent-red"></i> Not Yet Released</div>`;
+            }
+            
+            // Render info section
+            document.getElementById("info").innerHTML = `
+                <div class="flex flex-col md:flex-row gap-6">
+                    <div class="flex-shrink-0 w-full md:w-56">
+                        <img src="${safeImg(media.coverImage?.extraLarge || media.coverImage?.large)}" 
+                             class="rounded-xl shadow-2xl w-full object-cover border border-white/10" 
+                             alt="${title}">
+                    </div>
+                    <div class="flex-1">
+                        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">${title}</h1>
+                        <div class="flex flex-wrap items-center gap-3 mb-3">
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-star accent-red text-sm"></i>
+                                <span class="text-white font-semibold text-sm">${score}</span>
+                            </div>
+                            <div class="w-px h-4 bg-white/20"></div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-play accent-red text-sm"></i>
+                                <span class="text-white/80 text-sm">${media.format || "TV"}</span>
+                            </div>
+                            <div class="w-px h-4 bg-white/20"></div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-calendar-alt accent-red text-sm"></i>
+                                <span class="text-white/80 text-sm">${year}</span>
+                            </div>
+                            <div class="w-px h-4 bg-white/20"></div>
+                            <div class="flex items-center gap-1">
+                                <i class="fas fa-tv accent-red text-sm"></i>
+                                <span class="text-white/80 text-sm">${media.episodes || "?"} eps</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            ${media.genres?.slice(0, 5).map(g => `<span class="genre-tag"><i class="fas fa-hashtag accent-red text-[9px] mr-1"></i>${g}</span>`).join("") || ""}
+                        </div>
+                        <p class="text-white/70 text-sm leading-relaxed mb-3 synopsis-clamp">${description.substring(0, 400)}${description.length > 400 ? '...' : ''}</p>
+                        ${airingInfo}
+                    </div>
+                </div>
+            `;
+            
+            renderEpisodes();
+            
+            // Characters
+            if (media.characters?.edges?.length) {
+                document.getElementById("characters-grid").innerHTML = media.characters.edges.map(edge => {
+                    const char = edge.node;
+                    const va = edge.voiceActors?.[0];
+                    return `
+                        <div class="bg-black/30 rounded-xl p-3 flex gap-3 border border-white/5">
+                            <img src="${safeImg(char.image?.large)}" class="w-16 h-20 rounded-lg object-cover" alt="${char.name.full}">
+                            <div class="flex-1 min-w-0">
+                                <p class="font-bold text-sm truncate">${char.name.full}</p>
+                                <p class="text-xs text-gray-400">${edge.role || "Character"}</p>
+                                ${va ? `<p class="text-xs text-gray-400 mt-1 truncate">${va.name.full} <span class="text-[10px]">(${va.languageV2})</span></p>` : ""}
+                            </div>
+                        </div>
+                    `;
+                }).join("");
+            } else {
+                document.getElementById("characters-grid").innerHTML = '<p class="text-gray-400 text-sm col-span-full">No character data available.</p>';
+            }
+            
+            // Staff
+            if (media.staff?.edges?.length) {
+                document.getElementById("staff-grid").innerHTML = media.staff.edges.slice(0, 12).map(edge => {
+                    const staff = edge.node;
+                    return `
+                        <div class="text-center">
+                            <img src="${safeImg(staff.image?.large)}" class="w-16 h-16 rounded-full mx-auto object-cover border border-white/10" alt="${staff.name.full}">
+                            <p class="text-xs font-medium mt-2 truncate">${staff.name.full}</p>
+                            <p class="text-[10px] text-gray-400 truncate">${edge.role || "Staff"}</p>
+                        </div>
+                    `;
+                }).join("");
+            } else {
+                document.getElementById("staff-grid").innerHTML = '<p class="text-gray-400 text-sm col-span-full">No staff data available.</p>';
+            }
+            
+            // Recommendations
+            if (media.recommendations?.edges?.length) {
+                document.getElementById("recommendations-grid").innerHTML = media.recommendations.edges.map(edge => {
+                    const rec = edge.node.mediaRecommendation;
+                    return `
+                        <a href="anime.html?id=${rec.id}" class="group">
+                            <img src="${safeImg(rec.coverImage?.large)}" class="rounded-xl w-full object-cover group-hover:scale-105 transition duration-200" alt="${rec.title?.romaji}">
+                            <p class="text-xs font-medium mt-1 line-clamp-1 group-hover:text-[#ff4444] transition">${rec.title?.english || rec.title?.romaji || "Anime"}</p>
+                            <div class="flex items-center gap-1 mt-0.5">
+                                <i class="fas fa-star text-yellow-500 text-[9px]"></i>
+                                <span class="text-[10px] text-gray-400">${rec.averageScore ? (rec.averageScore/10).toFixed(1) : "N/A"}</span>
+                            </div>
+                        </a>
+                    `;
+                }).join("");
+            } else {
+                document.getElementById("recommendations-grid").innerHTML = '<p class="text-gray-400 text-sm col-span-full">No recommendations available.</p>';
+            }
+        }
+        
+        fetchAnime();
+    </script>
+</body>
+</html>
