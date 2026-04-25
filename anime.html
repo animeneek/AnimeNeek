@@ -19,20 +19,34 @@
             min-height: 100vh;
         }
         
-        /* Background with blur effect matching homepage */
-        .bg-blur {
+        /* Hero Background Image */
+        .hero-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(circle at 20% 30%, rgba(255, 68, 68, 0.08) 0%, #050505 100%);
-            z-index: -1;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.4;
+        }
+        
+        /* Dark overlay for readability */
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.7) 100%);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            z-index: 1;
         }
         
         /* Glassmorphic cards */
         .glass-card {
-            background: rgba(10, 10, 10, 0.6);
+            background: rgba(10, 10, 10, 0.55);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
@@ -44,8 +58,29 @@
             color: #ff4444;
         }
         
-        .accent-border {
-            border-color: #ff4444;
+        /* Genre tag */
+        .genre-tag {
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 68, 68, 0.3);
+            border-radius: 2rem;
+            padding: 0.3rem 1rem;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Status pill - WHITE TEXT */
+        .status-pill {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 2rem;
+            padding: 0.4rem 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         /* Episode button */
@@ -100,8 +135,8 @@
         
         /* Dropdown */
         select {
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(255, 68, 68, 0.3);
             border-radius: 2rem;
             padding: 0.5rem 1rem;
             color: white;
@@ -112,6 +147,11 @@
         select:focus {
             outline: none;
             border-color: #ff4444;
+        }
+        
+        select option {
+            background: #1a1a1a;
+            color: white;
         }
         
         /* Player iframe */
@@ -137,7 +177,7 @@
             border-radius: 4px;
         }
         
-        /* No scrollbar for episodes */
+        /* No scrollbar for episodes - desktop only */
         .no-scrollbar::-webkit-scrollbar {
             display: none;
         }
@@ -152,6 +192,16 @@
             -webkit-line-clamp: 4;
             -webkit-box-orient: vertical;
             overflow: hidden;
+            line-height: 1.6;
+        }
+        
+        /* Recommendation card */
+        .rec-card {
+            transition: transform 0.2s ease;
+        }
+        
+        .rec-card:hover {
+            transform: translateY(-4px);
         }
         
         /* Mobile adjustments */
@@ -160,20 +210,33 @@
                 border-radius: 1rem;
             }
             
-            .ep-btn {
-                padding: 0.4rem 0.6rem;
-                font-size: 0.7rem;
-            }
-            
             .source-btn {
                 padding: 0.5rem 1rem;
                 font-size: 0.75rem;
+            }
+            
+            /* Hide episode buttons on mobile - only dropdown */
+            .episodes-grid {
+                display: none !important;
+            }
+            
+            .recommendation-title {
+                font-size: 0.7rem !important;
+            }
+        }
+        
+        /* Desktop episode grid */
+        @media (min-width: 769px) {
+            .mobile-only-dropdown {
+                display: none;
             }
         }
     </style>
 </head>
 <body>
-    <div class="bg-blur"></div>
+    <!-- Hero Background Image -->
+    <img id="heroBg" class="hero-bg" src="https://github.com/animeneek/Neek/blob/main/assets/images/Prabhas_02.jpg?raw=true" alt="Background">
+    <div class="overlay"></div>
 
     <!-- Back button -->
     <div class="fixed top-4 left-4 z-50">
@@ -183,7 +246,7 @@
         </a>
     </div>
 
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 pt-20 pb-24">
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 py-8 pt-20 pb-24 relative z-10">
         
         <!-- Anime Info Section -->
         <div id="info" class="glass-card p-6 md:p-8 mb-8"></div>
@@ -212,8 +275,13 @@
                 </select>
             </div>
             
-            <!-- Episodes Grid -->
-            <div id="episodes" class="flex gap-2 overflow-x-auto no-scrollbar pb-4 mb-6"></div>
+            <!-- Episodes Grid - Desktop only -->
+            <div id="episodes" class="episodes-grid flex gap-2 overflow-x-auto no-scrollbar pb-4 mb-6"></div>
+            
+            <!-- Mobile hint -->
+            <div class="mobile-only-dropdown text-center text-gray-400 text-xs mt-2">
+                <i class="fas fa-chevron-down"></i> Use dropdown above to select episode
+            </div>
             
             <!-- Sources -->
             <h3 class="text-lg font-bold mb-3 flex items-center gap-2">
@@ -257,6 +325,7 @@
         
         const ANILIST_API = "https://graphql.anilist.co";
         const FALLBACK_IMG = "https://via.placeholder.com/300x450/1a1a1a/ff4444?text=No+Image";
+        const HERO_FALLBACK = "https://github.com/animeneek/Neek/blob/main/assets/images/Prabhas_02.jpg?raw=true";
         
         let currentEpisode = null;
         let malId = null;
@@ -269,6 +338,16 @@
         let jsonData = null;
         let isJsonAnime = false;
         let jsonEpisodeMap = new Map();
+        
+        // Set hero background
+        function setHeroBackground(bannerUrl) {
+            const heroImg = document.getElementById('heroBg');
+            if (bannerUrl && bannerUrl.trim() !== '') {
+                heroImg.src = bannerUrl;
+            } else {
+                heroImg.src = HERO_FALLBACK;
+            }
+        }
         
         // Fetch JSON data
         async function fetchJsonData() {
@@ -334,6 +413,7 @@
                 averageScore
                 genres
                 status
+                format
                 nextAiringEpisode {
                     episode
                     timeUntilAiring
@@ -382,9 +462,15 @@
                 body: JSON.stringify({ query: QUERY, variables: { id: Number(id) } })
             });
             const json = await response.json();
-            malId = json.data.Media.idMal;
+            const media = json.data.Media;
+            malId = media.idMal;
+            
+            // Set hero background from bannerImage or coverImage
+            const bannerUrl = media.bannerImage || media.coverImage?.extraLarge;
+            setHeroBackground(bannerUrl);
+            
             checkJsonAnime();
-            renderAnime(json.data.Media);
+            renderAnime(media);
         }
         
         function safeImg(src) {
@@ -431,7 +517,7 @@
             }
             
             // Populate dropdown
-            for (let i = 1; i <= Math.min(totalEpisodes, 200); i++) {
+            for (let i = 1; i <= Math.min(totalEpisodes, 500); i++) {
                 const opt = document.createElement("option");
                 opt.value = i;
                 opt.textContent = `Episode ${i}`;
@@ -442,24 +528,26 @@
                 if (e.target.value) selectEpisode(Number(e.target.value));
             };
             
-            // Grid for episodes
-            epContainer.className = "grid grid-cols-5 sm:grid-cols-8 md:grid-cols-12 lg:grid-cols-15 gap-2";
-            
-            const maxShow = Math.min(totalEpisodes, 50);
-            for (let i = 1; i <= maxShow; i++) {
-                const btn = document.createElement("button");
-                btn.className = "ep-btn";
-                btn.textContent = i;
-                btn.onclick = () => selectEpisode(i);
-                if (currentEpisode === i) btn.classList.add("active");
-                epContainer.appendChild(btn);
-            }
-            
-            if (totalEpisodes > 50) {
-                const moreHint = document.createElement("div");
-                moreHint.className = "ep-btn opacity-50 cursor-default";
-                moreHint.textContent = `+${totalEpisodes - 50} more`;
-                epContainer.appendChild(moreHint);
+            // Grid for episodes - DESKTOP ONLY
+            if (window.innerWidth > 768) {
+                epContainer.className = "grid grid-cols-5 sm:grid-cols-8 md:grid-cols-12 lg:grid-cols-15 gap-2";
+                
+                const maxShow = Math.min(totalEpisodes, 50);
+                for (let i = 1; i <= maxShow; i++) {
+                    const btn = document.createElement("button");
+                    btn.className = "ep-btn";
+                    btn.textContent = i;
+                    btn.onclick = () => selectEpisode(i);
+                    if (currentEpisode === i) btn.classList.add("active");
+                    epContainer.appendChild(btn);
+                }
+                
+                if (totalEpisodes > 50) {
+                    const moreHint = document.createElement("div");
+                    moreHint.className = "ep-btn opacity-50 cursor-default";
+                    moreHint.textContent = `+${totalEpisodes - 50} more`;
+                    epContainer.appendChild(moreHint);
+                }
             }
         }
         
@@ -504,7 +592,6 @@
                     srcContainer.appendChild(btn);
                 });
             } else if (malId && currentEpisode) {
-                // Fallback sources
                 const sources = [
                     { name: "SUB", url: `https://megaplay.buzz/stream/mal/${malId}/${currentEpisode}/sub` },
                     { name: "DUB", url: `https://megaplay.buzz/stream/mal/${malId}/${currentEpisode}/dub` }
@@ -539,7 +626,7 @@
             const description = stripHtml(media.description);
             const score = media.averageScore ? (media.averageScore / 10).toFixed(1) : "N/A";
             const year = media.startDate?.year || "TBA";
-            const genres = media.genres?.slice(0, 5).join(" • ") || "";
+            const format = media.format || "TV";
             
             let airingInfo = "";
             if (media.status === "RELEASING" && media.nextAiringEpisode) {
@@ -548,11 +635,11 @@
                 const days = Math.floor(sec / 86400);
                 const hours = Math.floor((sec % 86400) / 3600);
                 const minutes = Math.floor((sec % 3600) / 60);
-                airingInfo = `<div class="status-pill mt-2"><i class="fas fa-clock accent-red"></i> Next Episode ${ep}: ${days}d ${hours}h ${minutes}m</div>`;
+                airingInfo = `<div class="status-pill mt-3"><i class="fas fa-clock accent-red"></i> Next Episode ${ep}: ${days}d ${hours}h ${minutes}m</div>`;
             } else if (media.status === "FINISHED") {
-                airingInfo = `<div class="status-pill mt-2"><i class="fas fa-check-circle" style="color: #10b981;"></i> Completed • ${media.episodes || '?'} Episodes</div>`;
+                airingInfo = `<div class="status-pill mt-3"><i class="fas fa-check-circle" style="color: #10b981;"></i> Completed • ${media.episodes || '?'} Episodes</div>`;
             } else if (media.status === "NOT_YET_RELEASED") {
-                airingInfo = `<div class="status-pill mt-2"><i class="fas fa-clock accent-red"></i> Not Yet Released</div>`;
+                airingInfo = `<div class="status-pill mt-3"><i class="fas fa-clock accent-red"></i> Not Yet Released</div>`;
             }
             
             // Render info section
@@ -564,7 +651,7 @@
                              alt="${title}">
                     </div>
                     <div class="flex-1">
-                        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">${title}</h1>
+                        <h1 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-2">${escapeHtml(title)}</h1>
                         <div class="flex flex-wrap items-center gap-3 mb-3">
                             <div class="flex items-center gap-1">
                                 <i class="fas fa-star accent-red text-sm"></i>
@@ -573,7 +660,7 @@
                             <div class="w-px h-4 bg-white/20"></div>
                             <div class="flex items-center gap-1">
                                 <i class="fas fa-play accent-red text-sm"></i>
-                                <span class="text-white/80 text-sm">${media.format || "TV"}</span>
+                                <span class="text-white/80 text-sm">${format}</span>
                             </div>
                             <div class="w-px h-4 bg-white/20"></div>
                             <div class="flex items-center gap-1">
@@ -587,9 +674,9 @@
                             </div>
                         </div>
                         <div class="flex flex-wrap gap-2 mb-3">
-                            ${media.genres?.slice(0, 5).map(g => `<span class="genre-tag"><i class="fas fa-hashtag accent-red text-[9px] mr-1"></i>${g}</span>`).join("") || ""}
+                            ${media.genres?.slice(0, 5).map(g => `<span class="genre-tag"><i class="fas fa-hashtag accent-red text-[9px] mr-1"></i>${escapeHtml(g)}</span>`).join("") || ""}
                         </div>
-                        <p class="text-white/70 text-sm leading-relaxed mb-3 synopsis-clamp">${description.substring(0, 400)}${description.length > 400 ? '...' : ''}</p>
+                        <p class="text-white/70 text-sm leading-relaxed mb-3 synopsis-clamp">${escapeHtml(description.substring(0, 400))}${description.length > 400 ? '...' : ''}</p>
                         ${airingInfo}
                     </div>
                 </div>
@@ -604,11 +691,11 @@
                     const va = edge.voiceActors?.[0];
                     return `
                         <div class="bg-black/30 rounded-xl p-3 flex gap-3 border border-white/5">
-                            <img src="${safeImg(char.image?.large)}" class="w-16 h-20 rounded-lg object-cover" alt="${char.name.full}">
+                            <img src="${safeImg(char.image?.large)}" class="w-16 h-20 rounded-lg object-cover" alt="${escapeHtml(char.name.full)}">
                             <div class="flex-1 min-w-0">
-                                <p class="font-bold text-sm truncate">${char.name.full}</p>
-                                <p class="text-xs text-gray-400">${edge.role || "Character"}</p>
-                                ${va ? `<p class="text-xs text-gray-400 mt-1 truncate">${va.name.full} <span class="text-[10px]">(${va.languageV2})</span></p>` : ""}
+                                <p class="font-bold text-sm text-white truncate">${escapeHtml(char.name.full)}</p>
+                                <p class="text-xs text-gray-300">${escapeHtml(edge.role || "Character")}</p>
+                                ${va ? `<p class="text-xs text-gray-300 mt-1 truncate">${escapeHtml(va.name.full)} <span class="text-[10px] text-gray-400">(${va.languageV2})</span></p>` : ""}
                             </div>
                         </div>
                     `;
@@ -623,9 +710,9 @@
                     const staff = edge.node;
                     return `
                         <div class="text-center">
-                            <img src="${safeImg(staff.image?.large)}" class="w-16 h-16 rounded-full mx-auto object-cover border border-white/10" alt="${staff.name.full}">
-                            <p class="text-xs font-medium mt-2 truncate">${staff.name.full}</p>
-                            <p class="text-[10px] text-gray-400 truncate">${edge.role || "Staff"}</p>
+                            <img src="${safeImg(staff.image?.large)}" class="w-16 h-16 rounded-full mx-auto object-cover border border-white/10" alt="${escapeHtml(staff.name.full)}">
+                            <p class="text-xs font-medium mt-2 text-white truncate">${escapeHtml(staff.name.full)}</p>
+                            <p class="text-[10px] text-gray-400 truncate">${escapeHtml(edge.role || "Staff")}</p>
                         </div>
                     `;
                 }).join("");
@@ -633,17 +720,23 @@
                 document.getElementById("staff-grid").innerHTML = '<p class="text-gray-400 text-sm col-span-full">No staff data available.</p>';
             }
             
-            // Recommendations
+            // Recommendations - FIXED: better card layout
             if (media.recommendations?.edges?.length) {
                 document.getElementById("recommendations-grid").innerHTML = media.recommendations.edges.map(edge => {
                     const rec = edge.node.mediaRecommendation;
+                    const recTitle = rec.title?.english || rec.title?.romaji || "Anime";
+                    const recScore = rec.averageScore ? (rec.averageScore / 10).toFixed(1) : "N/A";
                     return `
-                        <a href="anime.html?id=${rec.id}" class="group">
-                            <img src="${safeImg(rec.coverImage?.large)}" class="rounded-xl w-full object-cover group-hover:scale-105 transition duration-200" alt="${rec.title?.romaji}">
-                            <p class="text-xs font-medium mt-1 line-clamp-1 group-hover:text-[#ff4444] transition">${rec.title?.english || rec.title?.romaji || "Anime"}</p>
-                            <div class="flex items-center gap-1 mt-0.5">
-                                <i class="fas fa-star text-yellow-500 text-[9px]"></i>
-                                <span class="text-[10px] text-gray-400">${rec.averageScore ? (rec.averageScore/10).toFixed(1) : "N/A"}</span>
+                        <a href="anime.html?id=${rec.id}" class="rec-card block">
+                            <div class="bg-black/30 rounded-xl overflow-hidden border border-white/5 hover:border-[#ff4444]/30 transition-all">
+                                <img src="${safeImg(rec.coverImage?.large)}" class="w-full aspect-[2/3] object-cover" alt="${escapeHtml(recTitle)}">
+                                <div class="p-2">
+                                    <p class="text-xs font-medium text-white line-clamp-2 recommendation-title">${escapeHtml(recTitle)}</p>
+                                    <div class="flex items-center gap-1 mt-1">
+                                        <i class="fas fa-star text-yellow-500 text-[9px]"></i>
+                                        <span class="text-[10px] text-gray-300">${recScore}</span>
+                                    </div>
+                                </div>
                             </div>
                         </a>
                     `;
@@ -652,6 +745,21 @@
                 document.getElementById("recommendations-grid").innerHTML = '<p class="text-gray-400 text-sm col-span-full">No recommendations available.</p>';
             }
         }
+        
+        function escapeHtml(str) {
+            if (!str) return '';
+            return str.replace(/[&<>]/g, function(m) {
+                if (m === '&') return '&amp;';
+                if (m === '<') return '&lt;';
+                if (m === '>') return '&gt;';
+                return m;
+            });
+        }
+        
+        // Handle window resize for episode grid
+        window.addEventListener('resize', () => {
+            renderEpisodes();
+        });
         
         fetchAnime();
     </script>
